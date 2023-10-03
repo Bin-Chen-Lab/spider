@@ -1,0 +1,11 @@
+Package: SPIDER
+Type: Package
+Title: Surface protein prediction using deep ensembles from single-cell RNA sequencing (SPIDER)
+Version: 0.1.0
+Author: Ruoqiao Chen (chenruo4@msu.edu), Jiayu Zhou, Bin Chen (chenbi12@msu.edu)
+Maintainer: Ruoqiao Chen <chenruo4@msu.edu>
+Description: Cell surface proteins serve as primary drug targets and cell phenotype markers but are conventionally quantified individually. The emergence of techniques like CITE-seq has enabled the quantification of multiple surface proteins’ abundance and mRNA expression simultaneously at the single-cell level, establishing their posttranslational correlation contextually. The published data have been utilized to train machine learning models for predicting surface protein abundance based solely from transcript expression. However, the small scale of proteins predicted and the poor generalization ability for these computational approaches to new contexts impede their widespread adoption. Here we propose SPIDER (surface protein prediction using deep ensembles from single-cell RNA sequencing), a context-agnostic zero-shot deep ensemble model, that enables abundance prediction for large-scale cell surface proteins and generalizes better to various contexts. Comprehensive benchmarking shows that SPIDER outperforms other state-of-the-art methods. Using single-cell transcriptomes and predicted protein abundance, we demonstrate the broad applications of SPIDER including cell type annotation, biomarker/target identification, and cell-cell interaction analysis in Hepatocellular Carcinoma and Colorectal cancer.
+License: GPL-3
+Depends: reticulate, Seurat, SingleR
+Encoding: UTF-8
+LazyData: true
