@@ -1,6 +1,6 @@
 # spider
 #First load your query transcriptomes in R studio (Seurat object):
-load('.../RNA_ADT_QC_SeuratObject_GSM5025059_20230115.RData')
+load('.../RNA_ADT_QC_SeuratObject_GSM5025059_20230115.RData') \n
 RNA[['study']] = 'GSM5025059' 
 
 setwd('/SPIDER/')
