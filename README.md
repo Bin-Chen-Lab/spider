@@ -11,7 +11,7 @@ load_all(".") <br />
 SPIDER_predict (           RNA,  <br />
                            tissue = ...,  <br />
                            disease = ..., <br />
-                           SPIDER_model_file_path = '/home/ubuntu/single_cell/SPIDER/SPIDER_weight/',<br />
+                           SPIDER_model_file_path = ...,<br />
                            use_cell_type = 'SingleR', <br />
                            query_cell_type = NULL,<br />
                            protein = 'All', <br />
