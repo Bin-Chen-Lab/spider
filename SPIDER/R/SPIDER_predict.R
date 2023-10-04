@@ -1,14 +1,14 @@
 SPIDER_predict <- function(seurat_data, 
                            tissue = 'pancreas', 
                            disease = 'healthy', 
-                           SPIDER_model_file_path = '/home/ubuntu/single_cell/test_code_20230925/SPIDER_weight/',
+                           SPIDER_model_file_path,
                    use_cell_type = 'SingleR', 
                    query_cell_type = NULL,
                    protein = 'All', 
                    use_pretrain = 'T',
-                   save_path = '/home/ubuntu/single_cell/test_code_20230925/',
-                   use_python_path = '/home/ubuntu/chenlab_deeplearning/chenlab_deeplearning_V2/anaconda3/envs/SCANVI/bin/python',
-                   scarches_path = '/home/ubuntu/single_cell/scarches-0.4-2.0/',
+                   save_path,
+                   use_python_path,
+                   scarches_path,
                    all_trainable_proteins_gene_names_6_training_sets = NULL,
                    file_A_B_C_matching_table = NULL){ 
 
