@@ -1,5 +1,3 @@
-# source /opt/rh/rh-python36/enable
-# source /home/stat/zhouzilu/project/zhouzilu/expressionGAN/.env/bin/activate
 import numpy as np
 import torch.nn as nn
 import pandas as pd
@@ -44,8 +42,6 @@ def predict_unseen(tissue, disease, save_path, SPIDER_model_file_path, use_pretr
             select_final_ensemble_members.append(select_protein_DNN_good[i])
     match_training_protein_gene_name_2 = match_training_protein_gene_name.loc[select_final_ensemble_members, :]
     match_training_protein_gene_name_2 = match_training_protein_gene_name_2.drop(match_training_protein_gene_name_2.loc[match_training_protein_gene_name_2['gene_name'].duplicated(),:].index) #delete duplicated genes among ensemble members
-    #(match_training_protein_gene_name_2).to_csv('/home/ubuntu/single_cell/more_pro/impute_protein_pipeline/train_reference_datasets/by_universal_features/train_DNN_seen_GSE128639/protein_gene_names_selected_final_ensemble members_from_combined_6_training_sets_DNN_onehot_celltype_tissue_disease_SCANVI_128dim_internal_val_threshold_' + str(threshold) + '_20230115.csv')
-    #match_training_protein_gene_name.to_csv('/home/ubuntu/single_cell/more_pro/impute_protein_pipeline/train_reference_datasets/by_universal_features/train_DNN_seen_GSE128639/protein_gene_names_union_289_DNNs_from_combined_6_training_sets_DNN_onehot_celltype_tissue_disease_SCANVI_128dim_internal_val_threshold_' + str(threshold) + '_20230115.csv')
     #--------------------------------------------------------------------------------------
     use_n_ensemble = 8
     threshold_DNN_internal_val_acc = '0.6'

@@ -1,5 +1,3 @@
-# source /opt/rh/rh-python36/enable
-# source /home/stat/zhouzilu/project/zhouzilu/expressionGAN/.env/bin/activate
 import numpy as np
 import torch.nn as nn
 import pandas as pd

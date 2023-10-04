@@ -1,5 +1,3 @@
-# source /opt/rh/rh-python36/enable
-# source /home/stat/zhouzilu/project/zhouzilu/expressionGAN/.env/bin/activate
 import numpy as np
 import torch.nn as nn
 import pandas as pd
@@ -20,8 +18,6 @@ def train_model(file_A_B_C_matching_table, all_protein_list, SPIDER_model_file_p
     #-------------------------------------------------------------
     #all_protein_list: Names of all proteins in your reference set.
     #file_A_B_C_matching_table: A table containing column names: 'file_B', 'file_C', 'tissue_class', 'disease_class', 'cell_type_class'.
-    #file_A_B_C_matching_table = pd.read_csv('/home/ubuntu/single_cell/more_pro/impute_protein_pipeline/train_reference_datasets/by_universal_features/train_DNN_seen_GSE128639/file_B_C_multitask_DNN_celltype_tissue_disease_cell_features_seen_proteins_all_cell_matching_table_combined_training_6_datasets_SCANVI_128dim_20230115.csv')
-    #all_protein_list = pd.read_csv('/home/ubuntu/single_cell/more_pro/impute_protein_pipeline/train_reference_datasets/by_universal_features/train_DNN_seen_GSE128639/union_trainable_protein_names_from_combined_6_training_sets_20230115.csv')['x']
     #-------------------------------------------------------------
     #train on 90% samples:
     all_epochs = []
