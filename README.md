@@ -1,4 +1,4 @@
-#SPIDER installation:
+# SPIDER istallation
 library(devtools) <br />
 devtools::install_github(repo = 'Bin-Chen-Lab/spider', subdir = '/SPIDER') <br />
 
