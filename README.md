@@ -7,7 +7,7 @@ devtools::install_github(repo = 'Bin-Chen-Lab/spider', subdir = '/SPIDER') <br /
 
 # SPIDER usage with sample data
 #Make sure you have the scArches downloaded first for python, and reticulate downloaded for R. <br />
-#First download the "sample_query.RData" from our github. <br />
+#First download the "sample_query.RData" and "SPIDER_weight.zip" from our github. <br />
 
 load("sample_query.RData") <br />
 
@@ -17,7 +17,7 @@ library(SPIDER) <br />
 SPIDER_predict (           seurat_data = RNA  <br />
                            tissue = 'pancreas',  <br />
                            disease = 'healthy', <br />
-                           SPIDER_model_file_path = paste0(.libPaths(), '/SPIDER/SPIDER_weight/'),<br />
+                           SPIDER_model_file_path = ...,<br />
                            use_cell_type = 'SingleR', <br />
                            query_cell_type = NULL,<br />
                            protein = 'All', <br />
