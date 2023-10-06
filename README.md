@@ -14,7 +14,7 @@ load("sample_query.RData") <br />
 library(SPIDER) <br />
 
 #Use SPIDER to predict on your query transcriptomes: <br />
-SPIDER_predict (           seurat_data = RNA  <br />
+SPIDER_predict (           seurat_data = RNA,  <br />
                            tissue = 'pancreas',  <br />
                            disease = 'healthy', <br />
                            SPIDER_model_file_path = ...,<br />
