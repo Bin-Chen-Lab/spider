@@ -1,15 +1,12 @@
-# SPIDER
-#First load your query transcriptomes in R studio (Seurat object):<br />
-load('.../RNA_ADT_QC_SeuratObject_GSM5025059_20230115.RData') <br />
-RNA[['study']] = 'GSM5025059' <br />
-
+#SPIDER installation:
 library(devtools) <br />
 devtools::install_github(repo = 'Bin-Chen-Lab/spider', subdir = '/SPIDER') <br />
 
+# SPIDER usage
 library(SPIDER) <br />
 
 #Use SPIDER to predict on your query transcriptomes: <br />
-SPIDER_predict (           RNA,  <br />
+SPIDER_predict (           seurat_data = ...,  <br />
                            tissue = ...,  <br />
                            disease = ..., <br />
                            SPIDER_model_file_path = ...,<br />
