@@ -6,7 +6,7 @@ library(devtools) <br />
 devtools::install_github(repo = 'Bin-Chen-Lab/spider', subdir = '/SPIDER') <br />
 
 # SPIDER usage with sample data
-
+#Make sure you have the scArches downloaded first for python.
 #First download the "sample_query.RData" from our github.
 
 load("sample_query.RData")
