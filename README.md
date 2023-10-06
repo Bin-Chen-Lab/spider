@@ -4,12 +4,15 @@ SPIDER (surface protein prediction using deep ensembles from single-cell RNA-seq
 # SPIDER intallation
 library(devtools) <br />
 devtools::install_github(repo = 'Bin-Chen-Lab/spider', subdir = '/SPIDER') <br />
+#Manually download the "sample_query.RData" and "SPIDER_python.zip" from our github. <br />
 
 # SPIDER usage with sample data
 #Make sure you have the scArches downloaded first for python, and reticulate downloaded for R. <br />
-#First download the "sample_query.RData" and "SPIDER_weight.zip" from our github. <br />
 
 load("sample_query.RData") <br />
+
+setwd(user_path) #Use the path where you save the "SPIDER_python.zip" <br />
+unzip('SPIDER_python.zip') <br />
 
 library(SPIDER) <br />
 
@@ -17,7 +20,7 @@ library(SPIDER) <br />
 SPIDER_predict (           seurat_data = RNA,  <br />
                            tissue = 'pancreas',  <br />
                            disease = 'healthy', <br />
-                           SPIDER_model_file_path = ...,<br />
+                           SPIDER_model_file_path = paste0(getwd(), '/SPIDER_python/SPIDER_weight/'), <br />
                            use_cell_type = 'SingleR', <br />
                            query_cell_type = NULL,<br />
                            protein = 'All', <br />
@@ -27,3 +30,5 @@ SPIDER_predict (           seurat_data = RNA,  <br />
                            scarches_path = NULL, #If you're using a specific path for scArches, enter this path. <br />
                            all_trainable_proteins_gene_names_6_training_sets = NULL,<br />
                            file_A_B_C_matching_table = NULL)<br />
+
+
