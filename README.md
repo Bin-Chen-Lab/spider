@@ -3,9 +3,9 @@
 load('.../RNA_ADT_QC_SeuratObject_GSM5025059_20230115.RData') <br />
 RNA[['study']] = 'GSM5025059' <br />
 
-setwd('/SPIDER/') <br />
 library(devtools) <br />
-load_all(".") <br />
+devtools::install_github(repo = 'Bin-Chen-Lab/spider', <br />
+                         subdir = '/SPIDER') <br />
 
 #Use SPIDER to predict on your query transcriptomes: <br />
 SPIDER_predict (           RNA,  <br />
