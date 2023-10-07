@@ -3,7 +3,8 @@ SPIDER (surface protein prediction using deep ensembles from single-cell RNA-seq
 
 # Intallation
 #Open R studio, type the following commands: <br />
-``` library(devtools) 
+```
+library(devtools) 
 devtools::install_github(repo = 'Bin-Chen-Lab/spider', subdir = '/SPIDER')
 ``` 
 
