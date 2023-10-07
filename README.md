@@ -1,7 +1,7 @@
 # SPIDER
 SPIDER (surface protein prediction using deep ensembles from single-cell RNA-seq) is a context-agnostic zero-shot deep ensemble model, which enables the large-scale prediction of cell surface protein abundance. Users can install and implement SPIDER with R.
 
-# Intallation
+# Installation
 Install the SPIDER package: <br />
 Open R studio, type the following commands: <br />
 ```
