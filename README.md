@@ -28,7 +28,7 @@ In R studio, load the sample query transcriptomes:
 library(SPIDER)
 data("sample_query")
 ```
-Use SPIDER to predict on your query transcriptomes:
+Use SPIDER to predict on the sample query transcriptomes:
 ```
 SPIDER_predict ( seurat_data = RNA,
                  tissue = 'pancreas',
