@@ -22,7 +22,7 @@ git pull origin main
 ```
 
 # SPIDER usage with sample data
-Make sure you have the scArches downloaded first for python, and reticulate, Seurat and SingleR downloaded for R. <br />
+Make sure you have the scArches downloaded first for python, and reticulate, Seurat and SingleR downloaded for R first. <br />
 In R studio, load the sample query transcriptomes:
 ```
 library(SPIDER)
