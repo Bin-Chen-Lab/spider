@@ -1,7 +1,21 @@
 # SPIDER
 SPIDER (surface protein prediction using deep ensembles from single-cell RNA-seq) is a context-agnostic zero-shot deep ensemble model, which enables the large-scale prediction of cell surface protein abundance. Users can install and implement SPIDER with R.
 
-# SPIDER intallation
+# Intallation
+#Open R studio, type the following commands: <br />
+``` library(devtools) <br />
+devtools::install_github(repo = 'Bin-Chen-Lab/spider', subdir = '/SPIDER') <br />``` 
+
+#Then in the terminal, type the following commands:
+cd '/user_path' #enter a filepath representing the directory where you want to store the later downloaded data.
+mkdir SPIDER_python
+cd SPIDER_python
+git init
+git remote add -f origin https://github.com/Bin-Chen-Lab/spider.git
+git config core.sparseCheckout true
+echo "SPIDER_python/" >> .git/info/sparse-checkout
+git pull origin main
+
 library(devtools) <br />
 devtools::install_github(repo = 'Bin-Chen-Lab/spider', subdir = '/SPIDER') <br />
 #Manually download the "sample_query.RData" and "SPIDER_python.zip" from our github. <br />
