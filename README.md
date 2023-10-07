@@ -20,9 +20,9 @@ git config core.sparseCheckout true
 echo "SPIDER_python/" >> .git/info/sparse-checkout
 git pull origin main
 ```
+Also, make sure you have the scArches installed for python, and reticulate, Seurat and SingleR installed for R. <br />
 
 # SPIDER usage with sample data
-Make sure you have the scArches installed first for python, and reticulate, Seurat and SingleR installed for R first. <br />
 In R studio, load the sample query transcriptomes:
 ```
 library(SPIDER)
