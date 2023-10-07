@@ -11,7 +11,7 @@ devtools::install_github(repo = 'Bin-Chen-Lab/spider', subdir = '/SPIDER')
 
 Then in the terminal, type the following commands:
 ```
-cd '/user_path' #enter a filepath representing the directory where you want to store the later downloaded data.
+cd '/user_path' #enter a filepath representing the directory where you want to store the later downloaded contents.
 mkdir SPIDER_python
 cd SPIDER_python
 git init
