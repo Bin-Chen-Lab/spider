@@ -2,6 +2,11 @@
 SPIDER (surface protein prediction using deep ensembles from single-cell RNA-seq) is a context-agnostic zero-shot deep ensemble model, which enables the large-scale prediction of cell surface protein abundance. 
 
 # Installation
+Before installing SPIDER, make sure you have installed the dependent R and python packages. To ensure this, first run the R lines as in: <br />
+https://github.com/Bin-Chen-Lab/spider/blob/fbcd525b52eb66a72b6257946bb30d1dff46737e/dependencies/R%20package%20dependencies.R <br />
+Then run the commands in terminal as in: <br />
+https://github.com/Bin-Chen-Lab/spider/blob/fbcd525b52eb66a72b6257946bb30d1dff46737e/dependencies/python%20package%20dependencies <br />
+
 Install the SPIDER package: <br />
 Open R studio, type the following lines: <br />
 ```
@@ -38,8 +43,8 @@ SPIDER_predict ( seurat_data = RNA,
                  protein = 'All',
                  use_pretrain = 'T', #Using pretrained SPIDER
                  save_path = ..., #enter a filepath where you want to save your prediction results.
-                 use_python_path = NULL, #If you're using a seperate python path for reticulate, specify this path. Otherwise just set this parameter to NULL.
-                 scarches_path = NULL, #If you're using a separate path for storing the scArches package, specify this path. Otherwise just set this parameter to NULL.
+                 use_python_path = NULL #If you're using a specific version of python for reticulate, indicate the path to it. It will pass this parameter to reticulate's use_python function. Otherwise just set this parameter to NULL.
+                 scarches_path = '/scarches_user_path/scarches-0.4.0/', #The scarches_user_path here should be the same as the scarches_user_path in "cd '/scarches_user_path'" in the previous scArches installation part.
                  all_trainable_proteins_gene_names_6_training_sets = NULL, #If you're using pretrained model, set this parameter to NULL
                  file_A_B_C_matching_table = NULL ) #If you're using pretrained model, set this parameter to NULL
 ```
