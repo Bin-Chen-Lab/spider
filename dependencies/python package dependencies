@@ -1,0 +1,20 @@
+#Type the following commands in your terminal to install dependent python packages before installing SPIDER:
+
+#Install scArches:
+cd '/scarches_user_path' #enter a filepath representing the directory where you want to store the later downloaded scarches package
+wget https://github.com/theislab/scarches/archive/refs/tags/v0.4.0.zip
+unzip 'v0.4.0.zip'
+
+#Install other required python packages:
+pip install scanpy==1.8.0
+pip install scvi-tools==0.12.1
+pip install utils==1.0.1
+pip install anndata==0.8.0
+pip install torchmetrics==0.7.3
+pip install matplotlib==3.5.1
+pip install pandas==1.4.2
+pip install numpy==1.21.6
+pip install numba==0.55.1
+pip install torch==1.11.0
+pip install scipy==1.8.0
+pip install scikit-learn==1.0.2
