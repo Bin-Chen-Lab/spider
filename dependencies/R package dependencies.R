@@ -7,3 +7,4 @@ BiocManager::install("SingleCellExperiment")
 
 install.packages("Seurat")
 install.packages("anndata")
+install.packages("reticulate")
