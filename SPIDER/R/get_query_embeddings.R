@@ -1,3 +1,16 @@
+#' Generating query transcriptome embeddings
+#'
+#' Generating query transcriptome embeddings via scArches-SCANVI.
+#' @param seurat_data Query transcriptomes after prepocessing. Including Seurat log normalization, clustering and umap reductions. You must also use seurat_data[["study"]] = ... to specify the batch IDs for all cells. 
+#' @param save_path The path to the directory where you want to save your generated query transcriptome embeddings. This should be the same directory as where you later save your protein abundance prediction results.
+#' @param use_pretrain Whether to use pretrained SPIDER model weights or not. If yes, set use_pretrain = 'T', otherwise set use_pretrain = 'F'.
+#' @param SPIDER_model_file_path The path to the saved pretrained SPIDER model weights.
+#' @param scarches_path The path to the directory where the scArches package is downloaded.
+#' @param use_python_path The path to the specific version of python for R reticulate. This parameter is only needed if you use a separate version of python for R reticulate from your default python configuration for reticulate. It will automatically pass this parameter to reticulate's "use_python" function. Otherwise just set this parameter to NULL.
+
+#' @return Generated query transcriptome embeddings will be saved to your indicated directory save_path.
+
+
 get_query_embeddings <- function(seurat_data, save_path, use_pretrain, SPIDER_model_file_path, scarches_path, use_python_path){
   
   library(Seurat)

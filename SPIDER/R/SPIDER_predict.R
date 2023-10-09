@@ -12,13 +12,10 @@
 #' @param save_path The path to the directory where you want to save your prediction results.
 #' @param use_python_path The path to the specific version of python for R reticulate. This parameter is only needed if you use a separate version of python for R reticulate from your default python configuration for reticulate. It will automatically pass this parameter to reticulate's "use_python" function. Otherwise just set this parameter to NULL.
 #' @param scarches_path The path to the directory where the scArches package is downloaded.
-#' @param all_trainable_proteins_gene_names The path to the directory where the scArches package is downloaded.
+#' @param all_trainable_proteins_gene_names A data frame matching all trainable proteins' (i.e., seen proteins in your reference set) names to their corresponding gene names. Columns must contain: 'consistent_protein_name' specifying the protein names, and 'gene_name' specifying the corresponding gene names.
 
 
-#' @return The temperature in degrees Celsius
-#' @examples 
-#' temp1 <- F_to_C(50);
-#' temp2 <- F_to_C( c(50, 63, 23) );
+#' @return Predicted surface protein abundance and confidence scores will be saved to your indicated directory save_path.
 
 
 SPIDER_predict <- function(seurat_data, 
