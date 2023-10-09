@@ -30,9 +30,14 @@ def predict_unseen(tissue, disease, save_path, SPIDER_model_file_path, use_pretr
         training_protein_DNN_internal_val = pd.read_csv(SPIDER_model_file_path + 'retrain_internal_val_performance.csv', index_col = 0)
     combined_6_training_sets_gene_cor_mat = pd.read_csv(SPIDER_model_file_path + 'unseen_file/shared_gene_features_20230115.csv')
     threshold = 0.6
-    training_protein_DNN_internal_val = training_protein_DNN_internal_val.iloc[:training_protein_DNN_internal_val.shape[0]-1, :]
+    if use_pretrain == 'T':
+        training_protein_DNN_internal_val = training_protein_DNN_internal_val.iloc[:training_protein_DNN_internal_val.shape[0]-1, :]
+    if training_protein_DNN_internal_val.shape[0] < 8:
+        raise Exception('Not enough training proteins for unseen protein prediction. Use more training proteins for model training or use our pretrained model for prediction')
+    if np.sum(training_protein_DNN_internal_val['pearson'] > threshold) < 8:
+        raise Exception('Not enough high-quality training proteins for unseen protein prediction. Use more training proteins for model training or use our pretrained model for prediction')
     select_protein_DNN_good = training_protein_DNN_internal_val.loc[training_protein_DNN_internal_val['pearson'] > threshold,:].index
-    match_training_protein_gene_name = match_training_protein_gene_name[{'consistent_protein_name', 'gene_name'}]
+    match_training_protein_gene_name = match_training_protein_gene_name[{'consistent_protein_name', 'gene_name'}]    
     match_training_protein_gene_name = match_training_protein_gene_name.drop_duplicates() #289 proteins
     match_training_protein_gene_name.index = match_training_protein_gene_name['consistent_protein_name']
     #Continue to select training proteins with existed z features in the gene co-expression matrix.
