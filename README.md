@@ -44,6 +44,6 @@ SPIDER_predict ( seurat_data = RNA,
                  save_path = ..., #enter a path to the directory where you want to save your prediction results.
                  use_python_path = ..., #If you use a specific version of python that separates from your default python configuration for reticulate, indicate the path to it. It will pass this parameter to reticulate's "use_python" function. Otherwise just set this parameter to NULL.
                  scarches_path = '/scarches_user_path/scarches-0.4.0/', #The scarches_user_path here should be the same as the scarches_user_path in "cd '/scarches_user_path'" in the previous scArches installation part.
-                 all_trainable_proteins_gene_names_6_training_sets = NULL, #If you're using pretrained model, set this parameter to NULL
+                 all_trainable_proteins_gene_names = NULL, #If you're using pretrained model, set this parameter to NULL
                  file_A_B_C_matching_table = NULL ) #If you're using pretrained model, set this parameter to NULL
 ```
