@@ -19,6 +19,10 @@ SPIDER_train <- function(SPIDER_model_file_path,
   setwd('../python/')
   SPIDER <- reticulate::import("SPIDER", convert = F)
   
+  if(length(all_protein_list) == 1){
+    all_protein_list = list(all_protein_list)
+  }
+  
   SPIDER$train_model$train_model(file_A_B_C_matching_table, all_protein_list, SPIDER_model_file_path)
 
 }
