@@ -7,7 +7,7 @@ SPIDER_reference_preprocessing <- function(reference = NULL,
                          SPIDER_model_file_path,
                          scarches_path){
   
-  #reference: The Seurat object of a reference CITE-seq dataset provided by the user (If using multiple Merge all your datasets together). Use reference[["batch"]] = ... to specify batch IDs. And if the user choose to use self-defined cell types for the reference set, they must also contain a column "cell_type" in the meta table.
+  #reference: The Seurat object of a reference CITE-seq dataset provided by the user (If using multiple Merge all your datasets together). Use reference[["study"]] = ... to specify batch IDs. And if the user choose to use self-defined cell types for the reference set, they must also contain a column "cell_type" in the meta table.
   #reference_cell_type: A meta table with the same format as "query_celltype_SingleR.csv". The row names are cell IDs and there should be one column named 'final_celltype' containing all self-defined cell types for every cell. Otherwise if users set use_cell_type = 'SingleR', they do not need to provide any matrix for the query_cell_type parameter. Default is NULL.
   #------------------------------------------
   #Assign cell types for the reference (Only when use_pretrain = 'F') for scArches-SCANVI embedding.
