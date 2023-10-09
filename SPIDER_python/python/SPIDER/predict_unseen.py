@@ -26,7 +26,7 @@ def predict_unseen(tissue, disease, save_path, SPIDER_model_file_path, use_pretr
         match_training_protein_gene_name = pd.read_csv(SPIDER_model_file_path + 'protein_gene_names_union_289_DNNs_from_combined_6_training_sets_DNN_onehot_celltype_tissue_disease_SCANVI_128dim_internal_val_threshold_0.6_20230115.csv')
         training_protein_DNN_internal_val = pd.read_csv(SPIDER_model_file_path + 'cor_per_pro_internal_val_6_combined_training_sets_cell_features_protein_specific_DNN_onehot_celltype_tissue_disease_SCANVI_128dim_64_32_16_0.0001_seen_proteins_20230115.csv', index_col = ['Unnamed: 0'])
     else:
-        match_training_protein_gene_name = pd.read_csv(all_trainable_proteins_gene_names_6_training_sets)
+        match_training_protein_gene_name = all_trainable_proteins_gene_names_6_training_sets
         training_protein_DNN_internal_val = pd.read_csv(SPIDER_model_file_path + 'retrain_internal_val_performance.csv')
     combined_6_training_sets_gene_cor_mat = pd.read_csv(SPIDER_model_file_path + 'unseen_file/shared_gene_features_20230115.csv')
     threshold = 0.6
