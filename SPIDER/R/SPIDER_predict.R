@@ -119,6 +119,8 @@ SPIDER_predict <- function(seurat_data,
       for (p in protein2) {
         all_protein_list =  c(all_protein_list, filter(all_trainable_proteins_gene_names_6_training_sets, gene_name == p)$consistent_protein_name)
       }
+    }else{
+      all_protein_list <- NULL
     }
     }
     if(use_pretrain == 'F'){
