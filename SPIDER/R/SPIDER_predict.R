@@ -112,12 +112,17 @@ SPIDER_predict <- function(seurat_data,
       all_protein_list = all_trainable_proteins_gene_names_6_training_sets$consistent_protein_name
     }
   }else{
+    if(use_pretrain == 'T'){
     protein2 <- intersect(all_trainable_proteins_gene_names_6_training_sets$gene_name, protein)
     if(length(protein2) > 0){
       all_protein_list <- NULL
       for (p in protein2) {
         all_protein_list =  c(all_protein_list, filter(all_trainable_proteins_gene_names_6_training_sets, gene_name == p)$consistent_protein_name)
       }
+    }
+    }
+    if(use_pretrain == 'F'){
+      all_protein_list = all_trainable_proteins_gene_names_6_training_sets$consistent_protein_name
     }
   }
   
