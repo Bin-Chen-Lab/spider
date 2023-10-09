@@ -4,9 +4,11 @@ get_reference_embeddings <- function(reference,
                                      scarches_path,
                                      use_cell_type = 'SingleR',
                                      use_python_path,
+                                     reference_celltype_save_path,
                                      reference_cell_type = NULL){
   
   #reference_cell_type: A meta table with the same format as "query_celltype_SingleR.csv". The row names are cell IDs and there should be one column named 'final_celltype' containing all self-defined cell types for every cell. Otherwise if users set use_cell_type = 'SingleR', they do not need to provide any matrix for the query_cell_type parameter. Default is NULL.
+  #reference_celltype_save_path: The path where you previously save your reference SingleR cell types. Use NULL if you didn't set use_cell_type='SingleR'
   #-------------------------------------------------------------------------
   cat('Start reference data embedding...\n')
   
@@ -33,7 +35,7 @@ get_reference_embeddings <- function(reference,
   DefaultAssay(reference) = "RNA"
   
   if(use_cell_type == 'SingleR'){
-    reference[['cell_type']] = read.csv(paste0(save_path, 'reference_celltype_SingleR.csv'), stringsAsFactors = F, row.names = 1, check.names = F)$final_celltype
+    reference[['cell_type']] = read.csv(paste0(reference_celltype_save_path, 'reference_celltype_SingleR.csv'), stringsAsFactors = F, row.names = 1, check.names = F)$final_celltype
   }else{
     reference[['cell_type']] = reference_cell_type
   }
