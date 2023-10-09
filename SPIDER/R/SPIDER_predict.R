@@ -12,7 +12,7 @@
 #' @param save_path The path to the directory where you want to save your prediction results.
 #' @param use_python_path The path to the specific version of python for R reticulate. This parameter is only needed if you use a separate version of python for R reticulate from your default python configuration for reticulate. It will automatically pass this parameter to reticulate's "use_python" function. Otherwise just set this parameter to NULL.
 #' @param scarches_path The path to the directory where the scArches package is downloaded.
-#' @param all_trainable_proteins_gene_names_6_training_sets The path to the directory where the scArches package is downloaded.
+#' @param all_trainable_proteins_gene_names The path to the directory where the scArches package is downloaded.
 
 
 #' @return The temperature in degrees Celsius
@@ -32,7 +32,7 @@ SPIDER_predict <- function(seurat_data,
                    save_path,
                    use_python_path,
                    scarches_path,
-                   all_trainable_proteins_gene_names_6_training_sets = NULL,
+                   all_trainable_proteins_gene_names = NULL,
                    file_A_B_C_matching_table = NULL){ 
 
   #seurat_data: Query transcriptomes after prepocessing. Including Seurat normalization, clustering and umap reductions. You should use seurat_data[["study"]] = ... to specify the batch IDs. 
@@ -43,11 +43,13 @@ SPIDER_predict <- function(seurat_data,
   #query_cell_type: A meta table with the same format as "query_celltype_SingleR.csv". The row names are cell IDs and there should be one column named 'final_celltype' containing all self-defined cell types for every cell. Otherwise if users set use_cell_type = 'SingleR', they do not need to provide any matrix for the query_cell_type parameter. Default is NULL.
   #protein: Corresponding gene names of proteins to be predicted. 'All', self-defined_protein_list.
   #use_python_path: Defined path to the reticulate python. Default is NULL.
-  #all_trainable_proteins_gene_names_6_training_sets: A table matching all seen proteins' names to corresponding gene names. columns: 'gene_name', 'consistent_protein_name'
+  #all_trainable_proteins_gene_names: A table matching all seen proteins' names to corresponding gene names. columns: 'gene_name', 'consistent_protein_name'
   #file_A_B_C_matching_table: A table containing column names: 'file_B', 'file_C', 'tissue_class', 'disease_class', 'cell_type_class'.
   #------------------------------------------
   library(Seurat)
   library(dplyr)
+  
+  all_trainable_proteins_gene_names_6_training_sets = all_trainable_proteins_gene_names 
   #------------------------------------------
   #Assign cell types for the query dataset for later SPIDER prediction.
   cat('Check query cell type annotation...\n')
@@ -96,7 +98,7 @@ SPIDER_predict <- function(seurat_data,
     training_epoch = read.csv(paste0(SPIDER_model_file_path, 'retrain_record_epochs.csv'), stringsAsFactors = F, check.names = F, row.names = 'protein_name')
     all_trainable_proteins_gene_names_6_training_sets = all_trainable_proteins_gene_names_6_training_sets
     if(is.null(all_trainable_proteins_gene_names_6_training_sets)){
-      stop('Error: Please input a table for all_trainable_proteins_gene_names_6_training_sets when not using pretrained model')
+      stop('Error: Please input a table for all_trainable_proteins_gene_names when not using pretrained model')
     }
     file_A_B_C_matching_table = file_A_B_C_matching_table
     if(is.null(file_A_B_C_matching_table)){
@@ -165,7 +167,7 @@ SPIDER_predict <- function(seurat_data,
     all_trainable_proteins_gene_names_6_training_sets = all_trainable_proteins_gene_names_6_training_sets
     training_epoch = read.csv(paste0(SPIDER_model_file_path, 'retrain_record_epochs.csv'), stringsAsFactors = F, check.names = F, row.names = 'protein_name')
     if(is.null(all_trainable_proteins_gene_names_6_training_sets)){
-      stop('Error: Please input a table for all_trainable_proteins_gene_names_6_training_sets when not using pretrained model')
+      stop('Error: Please input a table for all_trainable_proteins_gene_names when not using pretrained model')
     }
     file_A_B_C_matching_table = file_A_B_C_matching_table
     if(is.null(file_A_B_C_matching_table)){
