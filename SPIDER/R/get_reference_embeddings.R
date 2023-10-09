@@ -60,7 +60,7 @@ get_reference_embeddings <- function(reference,
   sc$set_figure_params(figsize=c(4, 4))
   torch$set_printoptions(precision=as.integer(3), sci_mode=FALSE, edgeitems=as.integer(7))
   
-  condition_key = 'batch'
+  condition_key = 'study'
   cell_type_key = 'cell_type'
   
   #Create SCANVI model and train it on fully labelled reference dataset:
