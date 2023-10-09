@@ -4,7 +4,7 @@ SPIDER_train <- function(SPIDER_model_file_path,
                          file_A_B_C_matching_table,
                          all_protein_list,
                          use_python_path){
-  
+  #all_protein_list: Names of all proteins in your reference set.
   #------------------------------------------
   #Train the SPIDER model for seen proteins (Only when use_pretrain = 'F'), save model weights and confidence scores.
   
