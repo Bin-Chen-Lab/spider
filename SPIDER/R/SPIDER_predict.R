@@ -1,3 +1,26 @@
+#' Surface protein abundance prediction
+#'
+#' Predict surface protein abundance on provided query transcriptomes.
+#' @param seurat_data Query transcriptomes after prepocessing. Including Seurat log normalization, clustering and umap reductions. You must also use seurat_data[["study"]] = ... to specify the batch IDs for all cells. 
+#' @param tissue The tissue source of the query transcriptomes. Default options include: 'bone marrow', 'brain', 'blood', 'pleura', 'peritoneum'.
+#' @param disease The disease state of the query transcriptomes. Default options include: 'healthy', 'mesothelioma', 'glioblastoma', 'leukemia'.
+#' @param SPIDER_model_file_path The path to the saved pretrained SPIDER model weights.
+#' @param use_cell_type The method name of cell type annotations. Default option is 'SingleR'.
+#' @param query_cell_type A data frame specifying cell types for the query dataset. The row names should be cell IDs and there should be one column named 'final_celltype' specifying your defined cell type for every cell. This parameter is only needed if users do not set use_cell_type = 'SingleR'. Otherwise if users set use_cell_type = 'SingleR', they do not need to provide any data frame for the query_cell_type parameter. Default is NULL.
+#' @param protein A vector specifying corresponding gene names of proteins to be predicted. Default option is 'All', where all surface proteins listed in UniProt will be predicted.
+#' @param use_pretrain Whether to use pretrained SPIDER model weights or not. If yes, set use_pretrain = 'T', otherwise set use_pretrain = 'F'.
+#' @param save_path The path to the directory where you want to save your prediction results.
+#' @param use_python_path The path to the specific version of python for R reticulate. This parameter is only needed if you use a separate version of python for R reticulate from your default python configuration for reticulate. It will automatically pass this parameter to reticulate's "use_python" function. Otherwise just set this parameter to NULL.
+#' @param scarches_path The path to the directory where the scArches package is downloaded.
+#' @param all_trainable_proteins_gene_names_6_training_sets The path to the directory where the scArches package is downloaded.
+
+
+#' @return The temperature in degrees Celsius
+#' @examples 
+#' temp1 <- F_to_C(50);
+#' temp2 <- F_to_C( c(50, 63, 23) );
+
+
 SPIDER_predict <- function(seurat_data, 
                            tissue = 'pancreas', 
                            disease = 'healthy', 
@@ -107,6 +130,10 @@ SPIDER_predict <- function(seurat_data,
   setwd('../python/')
   SPIDER <- reticulate::import("SPIDER", convert = F)
   
+  if(length(all_protein_list) == 1){
+    all_protein_list = list(all_protein_list)
+  }
+    
   if(length(all_protein_list) > 0){
   SPIDER$predict_seen$predict_seen(tissue, 
                                    disease, 
@@ -162,6 +189,10 @@ SPIDER_predict <- function(seurat_data,
   setwd(SPIDER_model_file_path)
   setwd('../python/')
   SPIDER <- reticulate::import("SPIDER", convert = F)
+  
+  if(length(all_test_proteins_gene_names) == 1){
+    all_test_proteins_gene_names = list(all_test_proteins_gene_names)
+  }
   
   if(length(intersect(all_test_proteins_gene_names, rownames(test_gene_coexp_matrix)) > 0)){
   SPIDER$predict_unseen$predict_unseen(tissue, 
