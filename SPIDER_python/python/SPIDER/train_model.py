@@ -189,7 +189,7 @@ def train_model(file_A_B_C_matching_table, all_protein_list, SPIDER_model_file_p
      all_epochs.append(epoch)
     all_epochs = pd.DataFrame({'protein_name': all_protein_list, 'training_epoch': all_epochs})
     all_epochs.to_csv('retrain_record_epochs.csv')
-    all_internal_val_performance = pd.DataFrame({'pearson': all_internal_val_performance})
+    all_internal_val_performance = pd.DataFrame({'pearson': all_internal_val_performance}, index = all_protein_list)
     all_internal_val_performance.to_csv('retrain_internal_val_performance.csv')
     #-----------------------------------------------------------------------------------------------------------------------------------
     #-----------------------------------------------------------------------------------------------------------------------------------
