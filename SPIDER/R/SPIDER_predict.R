@@ -112,7 +112,6 @@ SPIDER_predict <- function(seurat_data,
       all_protein_list = all_trainable_proteins_gene_names_6_training_sets$consistent_protein_name
     }
   }else{
-    if(use_pretrain == 'T'){
     protein2 <- intersect(all_trainable_proteins_gene_names_6_training_sets$gene_name, protein)
     if(length(protein2) > 0){
       all_protein_list <- NULL
@@ -121,10 +120,6 @@ SPIDER_predict <- function(seurat_data,
       }
     }else{
       all_protein_list <- NULL
-    }
-    }
-    if(use_pretrain == 'F'){
-      all_protein_list = all_trainable_proteins_gene_names_6_training_sets$consistent_protein_name
     }
   }
   
