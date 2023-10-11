@@ -16,8 +16,6 @@ devtools::install_github(repo = 'Bin-Chen-Lab/spider', subdir = '/SPIDER')
 Then in the terminal, type the following commands:
 ```
 cd '/user_path' #enter a filepath representing the directory where you want to store the later downloaded contents.
-mkdir SPIDER_python
-cd SPIDER_python
 git init
 git remote add -f origin https://github.com/Bin-Chen-Lab/spider.git
 git config core.sparseCheckout true
@@ -36,7 +34,7 @@ Use SPIDER to predict on the sample query transcriptomes:
 SPIDER_predict ( seurat_data = RNA,
                  tissue = 'pancreas',
                  disease = 'healthy',
-                 SPIDER_model_file_path = '/user_path/SPIDER_python/SPIDER_python/SPIDER_weight/', #The user_path here should be the same as the user_path in "cd '/user_path'" in the previous installation part.
+                 SPIDER_model_file_path = '/user_path/SPIDER_python/SPIDER_weight/', #The user_path here should be the same as the user_path in "cd '/user_path'" in the previous installation part.
                  use_cell_type = 'SingleR',
                  query_cell_type = NULL,
                  protein = 'All',
