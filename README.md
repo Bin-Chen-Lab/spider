@@ -65,7 +65,7 @@ SPIDER_predict ( seurat_data = RNA,
                  file_A_B_C_matching_table = NULL ) 
 ```
 Note that:<br /><br />
-SPIDER_model_file_path: The "user_path" here should be the same as your "user_path" in "cd '/user_path'" in the previous # Conda environment part.
+SPIDER_model_file_path: The "user_path" here should be the same as your "user_path" in "cd '/user_path'" in the previous # Conda environment part. <br /><br />
 save_path: Enter a path to the directory where you want to save your prediction results. <br /><br />
 use_python_path: If you use a specific version of python that separates from your default python configuration for reticulate, indicate the path to it. It will pass this parameter to reticulate's "use_python" function. Otherwise just set this parameter to NULL. <br /><br />
 scarches_path: The scarches_user_path here should be the same as the scarches_user_path in "cd '/scarches_user_path'" in the previous scArches installation part. <br /><br />
