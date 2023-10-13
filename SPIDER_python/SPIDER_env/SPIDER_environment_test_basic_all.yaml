@@ -1,0 +1,30 @@
+name: SPIDER
+channels:
+  - conda-forge
+  - defaults
+  - bioconda
+dependencies:
+  - python=3.9.2
+  - r-base=4.1.1
+  - pip=22.0.4
+  - r-devtools=2.4.3
+  - bioconductor-singler
+  - bioconductor-celldex
+  - bioconductor-singlecellexperiment
+  - r-anndata
+  - r-reticulate
+  - r-seurat
+  - pip:
+    - scanpy==1.8.0
+    - scvi-tools==0.12.1
+    - utils==1.0.1
+    - anndata==0.8.0
+    - torchmetrics==0.7.3
+    - matplotlib==3.5.1
+    - pandas==1.4.2
+    - numpy==1.21.6
+    - numba==0.55.1
+    - torch==1.11.0
+    - scipy==1.8.0
+    - scikit-learn==1.0.2
+    
