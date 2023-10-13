@@ -64,13 +64,13 @@ SPIDER_predict ( seurat_data = RNA,
                  all_trainable_proteins_gene_names = NULL, 
                  file_A_B_C_matching_table = NULL ) 
 ```
-Note that:<br />
+Note that:<br /><br />
 SPIDER_model_file_path: The "user_path" here should be the same as your "user_path" in "cd '/user_path'" in the previous # Conda environment part.
-save_path: Enter a path to the directory where you want to save your prediction results. <br />
-use_python_path: If you use a specific version of python that separates from your default python configuration for reticulate, indicate the path to it. It will pass this parameter to reticulate's "use_python" function. Otherwise just set this parameter to NULL. <br />
-scarches_path: The scarches_user_path here should be the same as the scarches_user_path in "cd '/scarches_user_path'" in the previous scArches installation part. <br />
-all_trainable_proteins_gene_names: If you're using pretrained model, set this parameter to NULL. <br />
-file_A_B_C_matching_table: If you're using pretrained model, set this parameter to NULL <br />
+save_path: Enter a path to the directory where you want to save your prediction results. <br /><br />
+use_python_path: If you use a specific version of python that separates from your default python configuration for reticulate, indicate the path to it. It will pass this parameter to reticulate's "use_python" function. Otherwise just set this parameter to NULL. <br /><br />
+scarches_path: The scarches_user_path here should be the same as the scarches_user_path in "cd '/scarches_user_path'" in the previous scArches installation part. <br /><br />
+all_trainable_proteins_gene_names: If you're using pretrained model, set this parameter to NULL. <br /><br />
+file_A_B_C_matching_table: If you're using pretrained model, set this parameter to NULL <br /><br />
 You can also type the following line in R to access the help file and check more details: <br />
 ```
 help(SPIDER_predict)
