@@ -22,12 +22,6 @@ cd '/scarches_user_path'
 wget https://github.com/theislab/scarches/archive/refs/tags/v0.4.0.zip
 unzip 'v0.4.0.zip'
 ```
-# Alternative way of installing dependencies
-Alternatively, you can choose to install these R and python dependent packages by first run the R lines as in: <br />
-https://github.com/Bin-Chen-Lab/spider/blob/fbcd525b52eb66a72b6257946bb30d1dff46737e/dependencies/R%20package%20dependencies.R <br />
-Then run the commands in terminal as in: <br />
-https://github.com/Bin-Chen-Lab/spider/blob/fbcd525b52eb66a72b6257946bb30d1dff46737e/dependencies/python%20package%20dependencies <br />
-Then you need to run the first 1~8 lines of code as in # Conda environment to download SPIDER's pretrained weights. 
 
 # Installation
 Install the SPIDER package: <br />
