@@ -60,9 +60,7 @@ def predict_unseen(tissue, disease, save_path, SPIDER_model_file_path, use_pretr
     all_trainable_proteins_gene_names_6_training_sets = all_trainable_proteins_gene_names_6_training_sets.loc[match_training_protein_gene_name_2['consistent_protein_name'], :]
     all_trainable_proteins_gene_names_6_training_sets_2 = all_trainable_proteins_gene_names_6_training_sets
     all_trainable_proteins_gene_names_6_training_sets_2.index = all_trainable_proteins_gene_names_6_training_sets_2['gene_name']
-    #Select ensemble members with corresponding genes existing in external validation set's coexpression file:
     shared_gene_ensemble_members_test_set_coexp = list(set(x.columns) & set(all_trainable_proteins_gene_names_6_training_sets_2['gene_name']))
-    #Select ensemble members with corresponding genes existing in external validation set's coexpression file
     shared_training_test_set_coexp_features = list(set(combined_6_training_sets_gene_cor_mat['gene']) & set(x.columns))
     z = x[shared_training_test_set_coexp_features]
     z_ensemble = z.loc[shared_gene_ensemble_members_test_set_coexp, :] #113 x 10702
