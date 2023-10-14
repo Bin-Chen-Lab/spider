@@ -21,7 +21,6 @@ def predict_unseen(tissue, disease, save_path, SPIDER_model_file_path, use_pretr
                    all_trainable_proteins_gene_names_6_training_sets, training_epoch, all_test_proteins_gene_names,
                    file_A_B_C_matching_table):
     #--------------------------------------------------------------------------------------
-    #select ensemble members:
     if use_pretrain == 'T':
         match_training_protein_gene_name = pd.read_csv(SPIDER_model_file_path + 'protein_gene_names_union_289_DNNs_from_combined_6_training_sets_DNN_onehot_celltype_tissue_disease_SCANVI_128dim_internal_val_threshold_0.6_20230115.csv')
         training_protein_DNN_internal_val = pd.read_csv(SPIDER_model_file_path + 'cor_per_pro_internal_val_6_combined_training_sets_cell_features_protein_specific_DNN_onehot_celltype_tissue_disease_SCANVI_128dim_64_32_16_0.0001_seen_proteins_20230115.csv', index_col = ['Unnamed: 0'])
@@ -56,7 +55,6 @@ def predict_unseen(tissue, disease, save_path, SPIDER_model_file_path, use_pretr
     #--------------------------------------------------------------------------------------
     #Prepare zero-shot learning:
     #-------------------------------------------------------------
-    #Get each one of the ensemble members' ~10000-dim normalized original features (i.e., Z1, Z2, ... Z22 for P1, P2, ... P22, respectively), save them:
     x = pd.read_csv(test_gene_coexp_matrix_file, index_col = 'Unnamed: 0')
     all_trainable_proteins_gene_names_6_training_sets.index = all_trainable_proteins_gene_names_6_training_sets['consistent_protein_name']
     all_trainable_proteins_gene_names_6_training_sets = all_trainable_proteins_gene_names_6_training_sets.loc[match_training_protein_gene_name_2['consistent_protein_name'], :]
@@ -69,13 +67,11 @@ def predict_unseen(tissue, disease, save_path, SPIDER_model_file_path, use_pretr
     z = x[shared_training_test_set_coexp_features]
     z_ensemble = z.loc[shared_gene_ensemble_members_test_set_coexp, :] #113 x 10702
     #-------------------------------------------------------------
-    #Get each one of the tested unseen proteins' ~10000-dim normalized original features (i.e., Z1, Z2, ... Z22 for P1, P2, ... P22, respectively), save them:
     shared_gene_unseen_proteins_test_set_coexp = list(set(x.columns) & set(all_test_proteins_gene_names))
     if len(shared_gene_unseen_proteins_test_set_coexp) == 0:
         sys.exit('No predictable unseen protein')
     z_unseen_proteins = z.loc[shared_gene_unseen_proteins_test_set_coexp, :] #3927 x 10702
     #-------------------------------------------------------------------------------------------------------------------------------------------------------
-    #Impute unseen proteins:
     all_protein_list = shared_gene_unseen_proteins_test_set_coexp
     def softmax(x):
         """Compute softmax values for each sets of scores in x."""
@@ -115,7 +111,6 @@ def predict_unseen(tissue, disease, save_path, SPIDER_model_file_path, use_pretr
                 test_set_cell_type_class[c] = list(file_A_B_C_matching_table.loc[file_A_B_C_matching_table['cell_type'] == celltype.iloc[c, :]['final_celltype']]['cell_type_class'])[0]
         #
         #-------------------------------------------------------------
-        #Get cosine similarity
         Dot_product = None
         dot_product_col_names = coef_col_names
         for protein_name2 in dot_product_col_names:
