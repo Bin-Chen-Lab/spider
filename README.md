@@ -2,7 +2,7 @@
 SPIDER is a zero-shot model, which enables the large-scale prediction of cell surface protein abundance from single-cell transcriptomes. 
 
 # Conda environment
-Before installing SPIDER, make sure you have installed the dependent R and python packages. You can do this by using our environment file, which will create a conda environment named "SPIDER" with the required dependencies: <br /> <br />
+Before installing SPIDER, make sure you have installed the dependent R and python packages. To do this, you can use our environment file, which will create a conda environment named "SPIDER" with the required dependencies: <br /> <br />
 In the terminal, first type the following commands. '/user_path' is a filepath representing the directory where you want to store the later downloaded contents. The downloaded folder will also contain SPIDER's pretrained weights: <br />
 ```
 cd '/user_path' 
