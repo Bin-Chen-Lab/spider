@@ -36,7 +36,7 @@ If you have created the conda environment as previously described, first enter t
 conda activate SPIDER
 ```
 
-In R studio, load the sample query transcriptomes:
+Your query transcriptome dataset should be only contain one tissue and one disease. If your data is the combination of multiple tissues and diseases, you should first split your data into multiple subsets and run SPIDER on each of them separately. We provide a sample query dataset For users to explore. In R studio, load the sample query transcriptomes:
 ```
 library(SPIDER)
 data("sample_query")
