@@ -69,3 +69,5 @@ You can also type the following line in R to access the help file and check more
 ```
 help(SPIDER_predict)
 ```
+# Reproducibility
+To find code to reproduce the results we generated in the manuscript, please visit [this separate github repository](https://github.com/Bin-Chen-Lab/spider_analysis/), which provides all code necessary to reproduce our results.
