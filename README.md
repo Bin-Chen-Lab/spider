@@ -73,4 +73,4 @@ help(SPIDER_predict)
 To find code to reproduce the results we generated in the manuscript, please visit [this separate github repository](https://github.com/Bin-Chen-Lab/spider_analysis/), which provides all code necessary to reproduce our results.
 
 # Citation
-please cite this repo with authors.
+please cite this repo https://github.com/Bin-Chen-Lab/spider with authors.
