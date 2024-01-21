@@ -5,7 +5,7 @@
 #' @param tissue The tissue source of the query transcriptomes. Default options include: 'bone marrow', 'brain', 'blood', 'pleura', 'peritoneum'.
 #' @param disease The disease state of the query transcriptomes. Default options include: 'healthy', 'mesothelioma', 'glioblastoma', 'leukemia'.
 #' @param SPIDER_model_file_path The path to the saved pretrained SPIDER model weights.
-#' @param use_cell_type The method name of cell type annotations. Default option is 'SingleR'.
+#' @param use_cell_type The method name of cell type annotations. Default option is 'SingleR'. If you intend to use the pre-trained SPIDER (use_pretrain = 'T'), you should set use_cell_type to default.
 #' @param query_cell_type A data frame specifying cell types for the query dataset. The row names should be cell IDs and there should be one column named 'final_celltype' specifying your defined cell type for every cell. This parameter is only needed if users do not set use_cell_type = 'SingleR'. Otherwise if users set use_cell_type = 'SingleR', they do not need to provide any data frame for the query_cell_type parameter. Default is NULL.
 #' @param protein A vector specifying corresponding gene names of proteins to be predicted. Default option is 'All', where all surface proteins listed in UniProt will be predicted.
 #' @param use_pretrain Whether to use pretrained SPIDER model weights or not. If yes, set use_pretrain = 'T', otherwise set use_pretrain = 'F'.
