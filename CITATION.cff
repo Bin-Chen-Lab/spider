@@ -16,6 +16,6 @@ preferred-citation:
   - family-names: Chen
     given-names: Bin
   title: "SPIDER"
-  type: article
+  type: package
 title: "SPIDER"
-date-released: "2023-10-02"
+date-released: "2023"
