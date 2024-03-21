@@ -17,6 +17,6 @@ preferred-citation:
     given-names: Bin
   title: "SPIDER"
   type: package
-title: "SPIDER"
-date-released: "2023-10-02"
-url: "https://github.com/Bin-Chen-Lab/spider"
+  title: "SPIDER"
+  date-released: "2023-10-02"
+  url: "https://github.com/Bin-Chen-Lab/spider"
