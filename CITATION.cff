@@ -7,5 +7,14 @@ authors:
     given-names: Bin
 cff-version: 1.0.0
 message: "If you use this software, please cite it using these metadata."
+preferred-citation:
+  authors:
+  - family-names: Chen
+    given-names: Ruoqiao
+  - family-names: Zhou
+    given-names: Jiayu
+  - family-names: Chen
+    given-names: Bin
+  title: "SPIDER"
+  type: package
 title: "SPIDER"
-date-released: "2023"
