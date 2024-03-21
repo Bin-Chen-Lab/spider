@@ -5,6 +5,6 @@ authors:
     given-names: Jiayu
   - family-names: Chen
     given-names: Bin
-cff-version: 1.0
+cff-version: 1.0.0
 message: "If you use this software, please cite it using these metadata."
 title: "SPIDER"
