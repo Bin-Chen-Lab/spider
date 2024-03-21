@@ -1,6 +1,10 @@
 authors:
-  - family-names: Chen, Zhou, Chen
-    given-names: Ruoqiao, Jiayu, Bin
+  - family-names: Chen
+    given-names: Ruoqiao
+  - family-names: Zhou
+    given-names: Jiayu
+  - family-names: Chen
+    given-names: Bin
 cff-version: 1.0
 message: "If you use this software, please cite it using these metadata."
 title: "SPIDER"
