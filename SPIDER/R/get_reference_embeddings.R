@@ -5,7 +5,8 @@ get_reference_embeddings <- function(reference,
                                      use_cell_type = 'SingleR',
                                      use_python_path,
                                      reference_celltype_save_path,
-                                     reference_cell_type = NULL){
+                                     reference_cell_type = NULL,
+                                     n_feature_RNA = 1000){
   
   #reference_cell_type: A meta table with the same format as "query_celltype_SingleR.csv". The row names are cell IDs and there should be one column named 'final_celltype' containing all self-defined cell types for every cell. Otherwise if users set use_cell_type = 'SingleR', they do not need to provide any matrix for the query_cell_type parameter. Default is NULL.
   #reference_celltype_save_path: The path where you previously save your reference SingleR cell types. Use NULL if you didn't set use_cell_type='SingleR'
@@ -41,8 +42,8 @@ get_reference_embeddings <- function(reference,
   }
   #---------------------------------------------------------------
   RNA <- NormalizeData(reference, normalization.method = "LogNormalize", scale.factor = 10000)
-  RNA <- FindVariableFeatures(RNA, selection.method = "vst", assay = "RNA", nfeatures = 1000)
-  top1000 <- head(VariableFeatures(RNA, assay = "RNA"), 1000)
+  RNA <- FindVariableFeatures(RNA, selection.method = "vst", assay = "RNA", nfeatures = n_feature_RNA)
+  top1000 <- head(VariableFeatures(RNA, assay = "RNA"), n_feature_RNA)
   RNA <- RNA[top1000]
   print(RNA)
   
@@ -95,7 +96,7 @@ get_reference_embeddings <- function(reference,
   
   write.csv(reference_latent, 'reference_embeddings.csv')
   
-  write.csv(as.character(py_to_r(adata$var$index)), 'reference_SCANVI_top1000_HVGs.csv')
+  write.csv(as.character(py_to_r(adata$var$index)), 'reference_SCANVI_top_HVGs.csv')
   
   return(reference_latent)
   

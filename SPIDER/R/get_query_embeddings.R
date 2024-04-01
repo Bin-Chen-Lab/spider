@@ -40,7 +40,7 @@ get_query_embeddings <- function(seurat_data, save_path, use_pretrain, SPIDER_mo
     save_top_1000_HVGs = read.csv(paste0(SPIDER_model_file_path, 'training_combined_6_datasets_RNA_SCANVI_latent_128dim_20230115/top_1000_HVGs_training_combined_6_datasets_RNA_SCANVI_latent_128dim_20230115.csv'), stringsAsFactors = F, row.names = 1)$x
   }
   if(use_pretrain == 'F'){
-    save_top_1000_HVGs = read.csv(paste0(SPIDER_model_file_path, 'reference_SCANVI_top1000_HVGs.csv'), stringsAsFactors = F, row.names = 1)$x
+    save_top_1000_HVGs = read.csv(paste0(SPIDER_model_file_path, 'reference_SCANVI_top_HVGs.csv'), stringsAsFactors = F, row.names = 1)$x
   }
 
   if(length(setdiff(save_top_1000_HVGs, rownames(RNA))) != 0){
