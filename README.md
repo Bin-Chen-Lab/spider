@@ -24,6 +24,10 @@ unzip 'v0.4.0.zip'
 ```
 
 # Installation
+If you have created the conda environment as previously described, first enter the conda environment by typing the following command in the terminal:
+```
+conda activate SPIDER
+```
 Install the SPIDER package: <br />
 Open R studio, type the following lines: <br />
 ```
@@ -31,7 +35,7 @@ devtools::install_github(repo = 'Bin-Chen-Lab/spider', subdir = '/SPIDER')
 ``` 
 
 # SPIDER usage with sample data
-If you have created the conda environment as previously described, first enter the conda environment by typing the following command in the terminal:
+Enter the conda environment by typing the following command in the terminal:
 ```
 conda activate SPIDER
 ```
