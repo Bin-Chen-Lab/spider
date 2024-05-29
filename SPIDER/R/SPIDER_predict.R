@@ -31,7 +31,8 @@ SPIDER_predict <- function(seurat_data,
                    use_python_path,
                    scarches_path,
                    all_trainable_proteins_gene_names = NULL,
-                   file_A_B_C_matching_table = NULL){ 
+                   file_A_B_C_matching_table = NULL,
+                          n_ensemble_members = 8){ 
 
   #seurat_data: Query transcriptomes after prepocessing. Including Seurat normalization, clustering and umap reductions. You should use seurat_data[["study"]] = ... to specify the batch IDs. 
   #SPIDER_model_file_path: The path to the saved SPIDER model weights and one-hot encoded features files.
