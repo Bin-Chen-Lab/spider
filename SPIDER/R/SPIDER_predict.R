@@ -206,7 +206,8 @@ SPIDER_predict <- function(seurat_data,
                                        all_trainable_proteins_gene_names_6_training_sets, 
                                        training_epoch, 
                                        all_test_proteins_gene_names,
-                                       file_A_B_C_matching_table)
+                                       file_A_B_C_matching_table,
+                                      n_ensemble_members)
   }
   
   #-------------------------------------------
