@@ -19,7 +19,7 @@ import collections
 
 def predict_unseen(tissue, disease, save_path, SPIDER_model_file_path, use_pretrain, cell_type_file,
                    all_trainable_proteins_gene_names_6_training_sets, training_epoch, all_test_proteins_gene_names,
-                   file_A_B_C_matching_table):
+                   file_A_B_C_matching_table, n_ensemble_members = 8):
     #--------------------------------------------------------------------------------------
     if use_pretrain == 'T':
         match_training_protein_gene_name = pd.read_csv(SPIDER_model_file_path + 'protein_gene_names_union_289_DNNs_from_combined_6_training_sets_DNN_onehot_celltype_tissue_disease_SCANVI_128dim_internal_val_threshold_0.6_20230115.csv')
@@ -47,7 +47,7 @@ def predict_unseen(tissue, disease, save_path, SPIDER_model_file_path, use_pretr
     match_training_protein_gene_name_2 = match_training_protein_gene_name.loc[select_final_ensemble_members, :]
     match_training_protein_gene_name_2 = match_training_protein_gene_name_2.drop(match_training_protein_gene_name_2.loc[match_training_protein_gene_name_2['gene_name'].duplicated(),:].index) #delete duplicated genes among ensemble members
     #--------------------------------------------------------------------------------------
-    use_n_ensemble = 8
+    use_n_ensemble = n_ensemble_members
     threshold_DNN_internal_val_acc = '0.6'
     RNA_SCANVI_latent_representation_file = save_path + 'query_embeddings.csv'
     test_gene_coexp_matrix_file = save_path + 'query_gene_coexpression.csv'
