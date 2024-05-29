@@ -60,7 +60,8 @@ SPIDER_predict ( seurat_data = RNA,
                  use_python_path = '/...', 
                  scarches_path = '/scarches_user_path/scarches-0.4.0/',
                  all_trainable_proteins_gene_names = NULL, 
-                 file_A_B_C_matching_table = NULL ) 
+                 file_A_B_C_matching_table = NULL,
+                 n_ensemble_members = 8 ) 
 ```
 Note that:<br /><br />
 SPIDER_model_file_path: The "user_path" here should be the same as your "user_path" in "cd '/user_path'" in the previous # Conda environment part. <br /><br />
