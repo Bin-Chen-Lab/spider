@@ -19,7 +19,7 @@ import collections
 
 def predict_unseen(tissue, disease, save_path, SPIDER_model_file_path, use_pretrain, cell_type_file,
                    all_trainable_proteins_gene_names_6_training_sets, training_epoch, all_test_proteins_gene_names,
-                   file_A_B_C_matching_table, n_ensemble_members = 8):
+                   file_A_B_C_matching_table, n_ensemble_members):
     #--------------------------------------------------------------------------------------
     if use_pretrain == 'T':
         match_training_protein_gene_name = pd.read_csv(SPIDER_model_file_path + 'protein_gene_names_union_289_DNNs_from_combined_6_training_sets_DNN_onehot_celltype_tissue_disease_SCANVI_128dim_internal_val_threshold_0.6_20230115.csv')
