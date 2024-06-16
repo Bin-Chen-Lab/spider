@@ -13,7 +13,7 @@ dependencies:
   - bioconductor-singlecellexperiment
   - r-anndata
   - r-reticulate
-  - r-seurat
+  - r-seurat=4*
   - pip:
     - scanpy==1.8.0
     - scvi-tools==0.12.1
