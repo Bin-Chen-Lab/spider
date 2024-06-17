@@ -208,7 +208,7 @@ SPIDER_predict <- function(seurat_data,
                                        training_epoch, 
                                        all_test_proteins_gene_names,
                                        file_A_B_C_matching_table,
-                                      n_ensemble_members)
+                                      as.integer(n_ensemble_members))
   }
   
   #-------------------------------------------
