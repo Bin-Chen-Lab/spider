@@ -17,7 +17,7 @@ git pull origin main
 ``` 
 
 ## 1.2 
-For users who are not using osx-arm64 for their computer system, they can use our yaml file to conveniently install all the dependency packages. To do this, in your terminal, type the following:
+Users can use our yaml file to conveniently install all the dependency packages. To do this, in your terminal, type the following:
 
 ```
 cd 'SPIDER_python/SPIDER_env'
@@ -25,17 +25,7 @@ conda env create -f SPIDER_environment_test_basic_all.yaml
 ```
 
 ## 1.3 (optional)
-For some users who fail to execute our yaml file in 1.2, with respect to different common issues, we provide corresponding solutions to install the dependency packages:<br />
-
-### 1.3.1 For users who use osx-arm64 for their computer system
-osx-arm64 is incompatible with the Bioconda approach of installation, therefore, these users cannot directly run the yaml file in 1.2. Also see Q2 in the "frequently asked questions" section below. If you use osx-arm64 and directly run the yaml file as in 1.2, you are likely to encounter the error shown in Q2. Instead, you should replace the codes in 1.2 with the following codes:
-```
-cd 'SPIDER_python/SPIDER_env'
-CONDA_SUBDIR=osx-64 conda env create -f SPIDER_environment_test_basic_all.yaml
-```
-
-### 1.3.2 For users who have other installation issues with certain dependency packages
-We also provide a manual way for these users to download dependency packages. These codes of manual installation have the same effect as the yaml file in 1.2. First, create a conda environment with specified R and python versions by typing the following commands in your terminal:
+For some users who fail to execute our yaml file in 1.2 due to system incompatibility, we also provide a manual way for these users to download dependency packages. These codes of manual installation have the same effect as the yaml file in 1.2. First, create a conda environment with specified R and python versions by typing the following commands in your terminal:
 
 ```
 conda create -n SPIDER python=3.9.2 
@@ -138,7 +128,7 @@ PackagesNotFoundError: The following packages are not available from current cha
   - bioconductor-singler
 ```
 #### A2: 
-This is likely because you use osx-arm64 for your computer system, which is incompatible with the Bioconda approach of installing the dependency packages. You should run the commands following step 1.3.1 instead of 1.2.
+This is likely because you use osx-arm64 for your computer system, which is incompatible with the Bioconda approach of installing the dependency packages. You may need to manually install the dependency packages as in 1.3 instead of 1.2. 
 
 # Reproducibility
 To find code to reproduce the results we generated in the manuscript, please visit [this separate github repository](https://github.com/Bin-Chen-Lab/spider_analysis/), which provides all code necessary to reproduce our results.
