@@ -25,7 +25,7 @@ conda env create -f SPIDER_environment_test_basic_all.yaml
 ```
 
 ## 1.3 (optional)
-For some users who fail to execute our yaml file in 1.2 due to system incompatibility, we also provide a manual way for these users to download dependency packages. These codes of manual installation have the same effect as the yaml file in 1.2. First, create a conda environment with specified R and python versions by typing the following commands in your terminal:
+For some users who fail to execute our yaml file in 1.2 due to system incompatibility with Bioconda, we also provide a manual way for these users to download dependency packages. These codes of manual installation have the same effect as the yaml file in 1.2. First, create a conda environment with specified R and python versions by typing the following commands in your terminal:
 
 ```
 conda create -n SPIDER python=3.9.2 
@@ -37,7 +37,6 @@ https://github.com/Bin-Chen-Lab/spider/blob/fbcd525b52eb66a72b6257946bb30d1dff46
 
 Then, in your R studio, run the R lines as in the following link file to manually install all the R dependency packages: <br />
 https://github.com/Bin-Chen-Lab/spider/blob/fbcd525b52eb66a72b6257946bb30d1dff46737e/dependencies/R%20package%20dependencies.R <br />
-
 
 ## 1.4 
 In your terminal, type the following commands to download the scArches package. It will create a folder "scarches-0.4.0":
