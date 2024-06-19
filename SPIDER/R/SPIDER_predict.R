@@ -81,7 +81,7 @@ SPIDER_predict <- function(seurat_data,
   
   cat('Prepare unseen...\n')
   
-  query_gene_coexp <- get_gene_coexp(seurat_data, save_path)
+  #query_gene_coexp <- get_gene_coexp(seurat_data, save_path)
 
   #------------------------------------------
   #Run SPIDER model to predict seen proteins on the query dataset, and save confidence scores.
