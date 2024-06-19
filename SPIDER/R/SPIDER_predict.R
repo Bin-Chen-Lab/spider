@@ -128,10 +128,12 @@ SPIDER_predict <- function(seurat_data,
   if(!is.null(use_python_path)){
     use_python(use_python_path, required = T)
   }
+  print('1')
   
   setwd(SPIDER_model_file_path)
   setwd('../python/')
   SPIDER <- reticulate::import("SPIDER", convert = F)
+  print('2')
   
   if(length(all_protein_list) == 1){
     all_protein_list = list(all_protein_list)
@@ -149,6 +151,7 @@ SPIDER_predict <- function(seurat_data,
                                    use_pretrain,
                                    file_A_B_C_matching_table)
   }
+  print('3')
   #------------------------------------------
   #Run SPIDER model to predict unseen proteins on the query dataset, and save confidence scores.
   
