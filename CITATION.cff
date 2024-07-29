@@ -1,11 +1,9 @@
-cff-version: 1.2.0
+cff-version: 1.1.0
 message: "If you use this software, please cite it as below."
-title: "SPIDER package"
-version: 1.0.0
-date-released: 2024-07-29
 authors:
-  - family-names: "Chen"
-    given-names: "Bin"
-    orcid: "https://orcid.org/0000-0001-8858-874X"
-repository-code: "https://github.com/Bin-Chen-Lab/spider"
-
+- family-names: Chen
+  given-names: Ruoqiao
+orcid: https://orcid.org/0000-0001-8858-874X
+title: SPIDER package
+version: publication
+date-released: 2024-07-29
