@@ -1,9 +1,20 @@
 cff-version: 1.1.0
 message: "If you use this software, please cite it as below."
+title: "SPIDER package"
+contact:
+  - name: "Ruoqiao Chen"
+    email: "chenruo4@msu.edu"
+  - name: "Bin Chen"
+    email: "chenbi12@msu.edu"
+type: "software"
+license: "MIT"
 authors:
 - family-names: Chen
   given-names: Ruoqiao
+- family-names: Zhou
+  given-names: Jiayu
+- family-names: Chen
+  given-names: Bin
   orcid: https://orcid.org/0000-0001-8858-874X
-title: SPIDER package
 version: 1.0.0
 date-released: 2024-07-29
