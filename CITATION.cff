@@ -5,10 +5,7 @@ version: 1.0.0
 date-released: 2024-07-29
 authors:
   - family-names: "Chen"
-    given-names: "Ruoqiao"
-  - family-names: "Zhou"
-    given-names: "Jiayu"
-  - family-names: "Chen"
     given-names: "Bin"
-repository-code: "https://github.com/Bin-Chen-Lab/spider/"
+    orcid: "https://orcid.org/0000-0001-8858-874X"
+repository-code: "https://github.com/Bin-Chen-Lab/spider"
 
