@@ -145,6 +145,12 @@ PackagesNotFoundError: The following packages are not available from current cha
 #### A2: 
 This is likely because you use osx-arm64 for your computer system, which is incompatible with the Bioconda approach of installing the dependency packages. You should run the commands following step 1.3.1 instead of 1.2.
 
+#### Q3:
+Can I run SPIDER on mouse scRNA-seq data?
+
+#### A3:
+Yes, you can run SPIDER on other species' scRNA-seq data besides human data. But note that if you choose to use our pretrained SPIDER model (i.e., use_pretrain = 'T') to directly predict on other species' data, you will need to convert the gene names in your scRNA-seq data to human gene names first before you run SPIDER on your data.
+
 # Reproducibility
 To find code to reproduce the results we generated in the manuscript, please visit [this separate github repository](https://github.com/Bin-Chen-Lab/spider_analysis/), which provides all code necessary to reproduce our results.
 
