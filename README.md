@@ -112,7 +112,9 @@ n_ensemble_members: The number of ensemble members. The default setting is 8 as 
 You can also type the following line in R to access the help file and check more details: <br />
 ```
 help(SPIDER_predict)
-``` 
+```
+The output files from SPIDER will be stored in your specified directory. The file "all_seen_proteins_predicted.csv" contains the predicted surface abundance for all the seen proteins. The file "all_unseen_proteins_predicted.csv" contains the predicted surface abundance for all the unseen proteins. The file "confidence_score_all_unseen_proteins.csv" contains the estimated prediction confidence for all the unseen proteins.
+
 # Frequently asked questions
 #### Q1: 
 I have already executed the codes from step 1 & 2 without enconutering error, but when I run step 3, why do I still enconter the following error? 
