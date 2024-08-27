@@ -1,5 +1,5 @@
 # SPIDER
-SPIDER (surface protein prediction using deep ensembles from single-cell RNA-seq) is a context-agnostic zero-shot deep ensemble model, which enables the large-scale prediction of cell surface protein abundance (can predict >2,500 proteins). 
+SPIDER (surface protein prediction using deep ensembles from single-cell RNA-seq) is a context-agnostic zero-shot deep ensemble model, which enables the large-scale prediction of cell surface protein abundance (can predict for >2,500 proteins) from single-cell transcriptomes. 
 
 # Step 1: Installation of dependency packages
 Before installing SPIDER, you will need to install all the dependent R and python packages, you can do this by using our environment file, which will create a conda environment named "SPIDER" with the required dependencies (If your computer does not have conda, you should go the the [conda website](https://conda.io/projects/conda/en/latest/index.html) to install conda first): <br /> <br />
