@@ -95,6 +95,10 @@ SPIDER_predict ( seurat_data = RNA,
 ```
 Note that:<br /><br />
 
+tissue: The name of the source tissue of your transcriptome data (If your data contain multiple tissues, subset your data by tissue and run SPIDER separately on each subset). Use help(SPIDER_predict) to read more about this parameter. If your data's corresponding tissue is NOT among the 5 default tissues ('bone marrow', 'brain', 'blood', 'pleura', 'peritoneum'), use a name that represents your data's corresponding tissue.
+
+disease: The name of the disease state of your transcriptome data (If your data contain multiple diseases, subset your data by disease and run SPIDER separately on each subset). Use help(SPIDER_predict) to read more about this parameter. If your data's corresponding disease is NOT among the 4 default diseases ('healthy', 'mesothelioma', 'glioblastoma', 'leukemia'), use a name that represents your data's corresponding disease.
+
 SPIDER_model_file_path: This is the absolute path to the "SPIDER_weight" folder, a sub-folder stored in the "SPIDER" folder which you previously created in step1.1.1. <br /><br />
 
 save_path: Enter a path to the directory where you want to save your prediction results. <br /><br />
