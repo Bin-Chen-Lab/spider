@@ -20,8 +20,7 @@ git pull origin main
 For users who are not using osx-arm64 for their computer system, they can use our yaml file to conveniently install all the dependency packages. To do this, in your terminal, type the following:
 
 ```
-cd 'SPIDER_python/SPIDER_env'
-conda env create -f SPIDER_environment_test_basic_all.yaml
+conda env create -f SPIDER_python/SPIDER_env/SPIDER_environment_test_basic_all.yaml
 ```
 
 ## 1.3 (optional)
@@ -30,8 +29,7 @@ For some users who fail to execute our yaml file in 1.2, with respect to differe
 ### 1.3.1 For users who use osx-arm64 for their computer system
 osx-arm64 is incompatible with the Bioconda approach of installation, therefore, these users cannot directly run the yaml file in 1.2. Also see Q2 in the "frequently asked questions" section below. If you use osx-arm64 and directly run the yaml file as in 1.2, you are likely to encounter the error shown in Q2. Instead, you should replace the codes in 1.2 with the following codes:
 ```
-cd 'SPIDER_python/SPIDER_env'
-CONDA_SUBDIR=osx-64 conda env create -f SPIDER_environment_test_basic_all_osx-arm64.yaml
+CONDA_SUBDIR=osx-64 conda env create -f SPIDER_python/SPIDER_env/SPIDER_environment_test_basic_all_osx-arm64.yaml
 ```
 
 ### 1.3.2 For users who have other installation issues with certain dependency packages
