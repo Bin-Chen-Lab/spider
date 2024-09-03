@@ -23,7 +23,7 @@ For users who are NOT using osx-arm64 for their computer system, they can use ou
 conda env create -f SPIDER_python/SPIDER_env/SPIDER_environment_test_basic_all.yaml
 ```
 
-## 1.3 (optional) For users who use osx-arm64 for their computer system
+## 1.3 (optional) For osx-arm64 users who fail to execute 1.2
 osx-arm64 is incompatible with the Bioconda approach of installation, therefore, these users may fail to execute our yaml file in 1.2. Also see Q2 in the "frequently asked questions" section below. If you use osx-arm64 and directly run the yaml file as in 1.2, you are likely to encounter the error shown in Q2. Instead, you can replace the codes in 1.2 with the following codes:
 ```
 CONDA_SUBDIR=osx-64 conda env create -f SPIDER_python/SPIDER_env/SPIDER_environment_test_basic_all_osx-arm64.yaml
