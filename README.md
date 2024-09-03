@@ -78,7 +78,7 @@ SPIDER_predict ( seurat_data = RNA,
                  use_python_path = NULL, 
                  scarches_path = paste0(prefix, '/scarches-0.4.0/')) 
 ```
-Note that you may need to modify **use_python_path = NULL** here according to your system setting. SPIDER will pass this parameter to [reticulate](https://rstudio.github.io/reticulate/)'s [use_python](https://rstudio.github.io/reticulate/reference/use_python.html) function. You can use **use_python_path = NULL** if your default python configuration for reticulate is the same as the python installed in your SPIDER conda environment. However, if your default python configuration for reticulate is different from the python installed in your SPIDER conda environment, you'll need to modify the **use_python_path** parameter to indicate the path to the python installed in your SPIDER conda environment. If you don't know how to locate your python path, see [Q1](#q1) in [frequently asked questions](#frequently-asked-questions) section below.<br /><br /> 
+Note that you may need to modify **"use_python_path = NULL"** here according to your system setting. SPIDER will pass this parameter to [reticulate](https://rstudio.github.io/reticulate/)'s [use_python](https://rstudio.github.io/reticulate/reference/use_python.html) function. You can use **"use_python_path = NULL"** if your default python configuration for reticulate is the same as the python installed in your SPIDER conda environment. However, if your default python configuration for reticulate is different from the python installed in your SPIDER conda environment, you'll need to modify the **use_python_path** parameter to indicate the path to the python installed in your SPIDER conda environment. If you don't know how to locate your python path, see [Q1](#q1) in [frequently asked questions](#frequently-asked-questions) section below.<br /><br /> 
 
 For other commonly used parameters here:<br /><br />
 
@@ -100,9 +100,9 @@ help(SPIDER_predict)
 # Step 4: Downstream applications with SPIDER's output files
 
 The output files from SPIDER will be stored in your specified directory. <br />
-The file "all_seen_proteins_predicted.csv" contains the predicted surface abundance for all the seen proteins. <br />
-The file "all_unseen_proteins_predicted.csv" contains the predicted surface abundance for all the unseen proteins. <br />
-The file "confidence_score_all_unseen_proteins.csv" contains the estimated prediction confidence for all the unseen proteins.
+The file **"all_seen_proteins_predicted.csv"** contains the predicted surface abundance for all the seen proteins. <br />
+The file **"all_unseen_proteins_predicted.csv"** contains the predicted surface abundance for all the unseen proteins. <br />
+The file **"confidence_score_all_unseen_proteins.csv"** contains the estimated prediction confidence for all the unseen proteins.
 
 # Frequently asked questions
 #### Q1: 
