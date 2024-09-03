@@ -24,7 +24,7 @@ conda env create -f SPIDER_python/SPIDER_env/SPIDER_environment_test_basic_all.y
 ```
 
 ## 1.3 (optional) For osx-arm64 users who fail to execute 1.2
-osx-arm64 is incompatible with the Bioconda approach of installation, therefore, these users may fail to execute our yaml file in 1.2. Also see Q2 in the "frequently asked questions" section below. If you use osx-arm64 and directly run the yaml file as in 1.2, you are likely to encounter the error shown in Q2. Instead, you can replace the codes in 1.2 with the following codes:
+osx-arm64 is incompatible with the Bioconda approach of installation, therefore, these users may fail to execute our yaml file in 1.2. Also see [Q2](#q2) in the [frequently asked questions](#frequently-asked-questions) section below. If you use osx-arm64 and directly run the yaml file as in 1.2, you are likely to encounter the error shown in [Q2](#q2). Instead, you can replace the codes in 1.2 with the following codes:
 ```
 CONDA_SUBDIR=osx-64 conda env create -f SPIDER_python/SPIDER_env/SPIDER_environment_test_basic_all_osx-arm64.yaml
 ```
@@ -78,9 +78,9 @@ SPIDER_predict ( seurat_data = RNA,
                  use_python_path = NULL, 
                  scarches_path = paste0(prefix, '/scarches-0.4.0/')) 
 ```
-Note that you may need to modify "use_python_path = NULL" here according to your system setting. SPIDER will pass this parameter to [reticulate](https://rstudio.github.io/reticulate/)'s [use_python](https://rstudio.github.io/reticulate/reference/use_python.html) function. You can use "use_python_path = NULL" if your default python configuration for reticulate is the same as the python installed in your SPIDER conda environment. However, if your default python configuration for reticulate is different from the python installed in your SPIDER conda environment, you'll need to modify the "use_python_path" parameter to indicate the path to the python installed in your SPIDER conda environment. If you don't know how to locate your python path, see [Q1](#q1) in [frequently asked questions](https://github.com/Bin-Chen-Lab/spider/tree/main?tab=readme-ov-file#q1) section below.<br /><br /> 
+Note that you may need to modify "use_python_path = NULL" here according to your system setting. SPIDER will pass this parameter to [reticulate](https://rstudio.github.io/reticulate/)'s [use_python](https://rstudio.github.io/reticulate/reference/use_python.html) function. You can use "use_python_path = NULL" if your default python configuration for reticulate is the same as the python installed in your SPIDER conda environment. However, if your default python configuration for reticulate is different from the python installed in your SPIDER conda environment, you'll need to modify the "use_python_path" parameter to indicate the path to the python installed in your SPIDER conda environment. If you don't know how to locate your python path, see [Q1](#q1) in [frequently asked questions](#frequently-asked-questions) section below.<br /><br /> 
 
-For other parameters:<br /><br />
+For other commonly used parameters here:<br /><br />
 
 tissue: The name of the source tissue of your transcriptome data (If your data contain multiple tissues, subset your data by tissue and run SPIDER separately on each subset). Use help(SPIDER_predict) to read more about this parameter. If your data's corresponding tissue is NOT among the 5 default tissues ('bone marrow', 'brain', 'blood', 'pleura', 'peritoneum'), use a new name that represents your data's corresponding tissue. <br /><br />
 
