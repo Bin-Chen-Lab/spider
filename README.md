@@ -28,52 +28,74 @@ git pull origin main
 For users who are NOT using osx-arm64 for their computer system, they can use our yaml file to conveniently install all the dependency packages. To do this, in your terminal, type the following:
 </p>
 
-
 ```
 conda env create -f SPIDER_python/SPIDER_env/SPIDER_environment_test_basic_all.yaml
 ```
 
 ## 1.3 (optional) For osx-arm64 users who fail to execute 1.2
+<p align="justify">
 osx-arm64 is incompatible with the Bioconda approach of installation, therefore, these users may fail to execute our yaml file in 1.2. Also see [Q2](#q2) in the [frequently asked questions](#frequently-asked-questions) section below. If you use osx-arm64 and directly run the yaml file as in 1.2, you are likely to encounter the error shown in [Q2](#q2). Instead, you can replace the codes in 1.2 with the following codes:
+</p>
+
 ```
 CONDA_SUBDIR=osx-64 conda env create -f SPIDER_python/SPIDER_env/SPIDER_environment_test_basic_all_osx-arm64.yaml
 ```
 
 ## 1.4 
+<p align="justify">
 In your terminal, type the following commands to download the scArches package in the "SPIDER" folder. It will create another folder "scarches-0.4.0" there:
+</p>
+  
 ```
 wget https://github.com/theislab/scarches/archive/refs/tags/v0.4.0.zip
 unzip 'v0.4.0.zip'
-``` 
+```
+<p align="justify">
 (Alternatively, you can also simply open the link in your browser and directly download the zip file without wget. Munually unzip the file and put the "scarches-0.4.0" folder in your "SPIDER" folder.)
+</p>
 
 # Step 2: Installation of SPIDER
+<p align="justify">
 You should first complete step 1 before you do this step 2. After you have created the conda environment with all the dependency packages installed as previously described, first open R in the activated conda environment by typing the following commands in the terminal:
+</p>
+  
 ```
 conda activate SPIDER
 R
 ```
+<p align="justify">
 Then install the SPIDER package in R by typing the following lines in R: <br />
+</p>
+  
 ```
 devtools::install_github(repo = 'Bin-Chen-Lab/spider', subdir = '/SPIDER')
 ```
+<p align="justify">
 Your system may ask you "Enter one or more numbers, or an empty line to skip updates", just enter an empty line to skip updates.
+</p>
 
 # Step 3: SPIDER usage with sample data
+<p align="justify">
 First, let's create an empty folder for saving your results. In your computer's terminal, use the following command to create another folder named SPIDER_results in your "SPIDER" folder, and then open R in the activated conda environment: <br />
+</p>
+  
 ```
 mkdir SPIDER_results
 conda activate SPIDER
 R
 ```
-
+<p align="justify">
 Then in R (opened in the activated conda environment), load our sample query transcriptomes:
+</p>
+  
 ```
 library(SPIDER)
 data("sample_query")
 ```
-
+<p align="justify">
 In R, use SPIDER to predict on the sample query transcriptomes:
+</p>
+  
 ```
 prefix = getwd() #The SPIDER_predict function uses ABSOLUTE paths as input parameters
 
@@ -88,6 +110,7 @@ SPIDER_predict ( seurat_data = RNA,
                  use_python_path = NULL, 
                  scarches_path = paste0(prefix, '/scarches-0.4.0/')) 
 ```
+<p align="justify">
 Note that you may need to modify **"use_python_path = NULL"** here according to your system setting. SPIDER will pass this parameter to [reticulate](https://rstudio.github.io/reticulate/)'s [use_python](https://rstudio.github.io/reticulate/reference/use_python.html) function. You can use **"use_python_path = NULL"** if your default python configuration for reticulate is the same as the python installed in your SPIDER conda environment. However, if your default python configuration for reticulate is different from the python installed in your SPIDER conda environment, you'll need to modify the **use_python_path** parameter to indicate the path to the python installed in your SPIDER conda environment. If you don't know how to locate your python path, see [Q1](#q1) in [frequently asked questions](#frequently-asked-questions) section below.<br /><br /> 
 
 For other commonly used parameters here:<br /><br />
@@ -103,6 +126,8 @@ For other commonly used parameters here:<br /><br />
 **scarches_path**: This is the ABSOLUTE path to the "scarches-0.4.0" folder, a sub-folder stored in your "SPIDER" folder. Avoid using the "~" symbol to locate your path. <br /><br />
 
 You can also type the following line in R to access the help file and check more details for other parameters: <br />
+</p>
+
 ```
 help(SPIDER_predict)
 ```
