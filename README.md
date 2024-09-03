@@ -72,7 +72,7 @@ Your system may ask you "Enter one or more numbers, or an empty line to skip upd
 
 # Step 3: SPIDER usage with sample data
 <p align="justify">
-First, let's create an empty folder for saving your results. In your computer's terminal, use the following command to create another folder named SPIDER_results in your "SPIDER" folder, and then open R in the activated conda environment: <br />
+First, let's create an empty folder for saving your results. In your computer's terminal, use the following command to create another folder named "SPIDER_results" in your "SPIDER" folder, and then open R in the activated conda environment: <br />
 </p>
   
 ```
