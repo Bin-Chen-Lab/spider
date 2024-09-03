@@ -10,7 +10,7 @@
 
 #' @return Generated query transcriptome embeddings will be saved to your indicated directory save_path.
 
-
+#' @export
 get_query_embeddings <- function(seurat_data, save_path, use_pretrain, SPIDER_model_file_path, scarches_path, use_python_path){
   
   library(Seurat)

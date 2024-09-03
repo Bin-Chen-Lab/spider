@@ -1,3 +1,4 @@
+#' @export
 #------------------------------------------
 #Train on reference set.
 SPIDER_train <- function(SPIDER_model_file_path,

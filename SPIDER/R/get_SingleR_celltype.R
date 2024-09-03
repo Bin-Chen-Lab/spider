@@ -1,3 +1,4 @@
+#' @export
 get_SingleR_celltype <- function(seurat_data, save_path, specify = 'query'){
   
   #specify: 'query', 'reference'

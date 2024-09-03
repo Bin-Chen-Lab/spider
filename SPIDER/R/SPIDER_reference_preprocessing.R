@@ -1,3 +1,4 @@
+#' @export
 #------------------------------------------
 #Reference set preprocessing: 1. Check cell type annotation. 2. Embed transcriptomes.
 SPIDER_reference_preprocessing <- function(reference = NULL,

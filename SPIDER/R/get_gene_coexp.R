@@ -1,3 +1,4 @@
+#' @export
 get_gene_coexp <- function(seurat_data, save_path, use_python_path){
   
   library(reticulate)
@@ -15,3 +16,4 @@ get_gene_coexp <- function(seurat_data, save_path, use_python_path){
   
   return(gene_coexp)
 }
+

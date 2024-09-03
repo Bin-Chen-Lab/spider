@@ -18,7 +18,7 @@
 
 #' @return Predicted surface protein abundance and confidence scores will be saved to your indicated directory save_path.
 
-
+#' @export
 SPIDER_predict <- function(seurat_data, 
                            tissue = 'pancreas', 
                            disease = 'healthy', 

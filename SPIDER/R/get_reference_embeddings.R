@@ -1,3 +1,4 @@
+#' @export
 #generate reference embeddings using scArches-SCANVI:
 get_reference_embeddings <- function(reference, 
                                      SPIDER_model_file_path, 
