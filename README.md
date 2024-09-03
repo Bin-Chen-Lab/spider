@@ -98,19 +98,19 @@ SPIDER_predict ( seurat_data = RNA,
                  file_A_B_C_matching_table = NULL,
                  n_ensemble_members = 8 ) 
 ```
-Note that:<br /><br />
+Note that you may need to modify "use_python_path = NULL" here according to your system setting. SPIDER will pass this parameter to [reticulate](https://rstudio.github.io/reticulate/)'s [use_python](https://rstudio.github.io/reticulate/reference/use_python.html) function. You can use "use_python_path = NULL" if your default python configuration for reticulate is the same python installed in your SPIDER conda environmet. However, if your default python configuration for reticulate is different from the python installed in your SPIDER conda environment, you'll need to modify the "use_python_path" parameter to indicate the path to the python installed in your SPIDER conda environment. If you don't know how to locate your python path, see Q1 in "frequently asked questions" section below.<br /><br /> 
 
-tissue: The name of the source tissue of your transcriptome data (If your data contain multiple tissues, subset your data by tissue and run SPIDER separately on each subset). Use help(SPIDER_predict) to read more about this parameter. If your data's corresponding tissue is NOT among the 5 default tissues ('bone marrow', 'brain', 'blood', 'pleura', 'peritoneum'), use a name that represents your data's corresponding tissue.
+For other parameters:<br /><br />
 
-disease: The name of the disease state of your transcriptome data (If your data contain multiple diseases, subset your data by disease and run SPIDER separately on each subset). Use help(SPIDER_predict) to read more about this parameter. If your data's corresponding disease is NOT among the 4 default diseases ('healthy', 'mesothelioma', 'glioblastoma', 'leukemia'), use a name that represents your data's corresponding disease.
+tissue: The name of the source tissue of your transcriptome data (If your data contain multiple tissues, subset your data by tissue and run SPIDER separately on each subset). Use help(SPIDER_predict) to read more about this parameter. If your data's corresponding tissue is NOT among the 5 default tissues ('bone marrow', 'brain', 'blood', 'pleura', 'peritoneum'), use a new name that represents your data's corresponding tissue. <br /><br />
 
-SPIDER_model_file_path: This is the absolute path to the "SPIDER_weight" folder, a sub-folder stored in the "SPIDER" folder which you previously created in step1.1.1. <br /><br />
+disease: The name of the disease state of your transcriptome data (If your data contain multiple diseases, subset your data by disease and run SPIDER separately on each subset). Use help(SPIDER_predict) to read more about this parameter. If your data's corresponding disease is NOT among the 4 default diseases ('healthy', 'mesothelioma', 'glioblastoma', 'leukemia'), use a new name that represents your data's corresponding disease.
 
-save_path: Enter a path to the directory where you want to save your prediction results. <br /><br />
+SPIDER_model_file_path: This is the path to the "SPIDER_weight" folder, a sub-folder stored in your "SPIDER" folder. Avoid using the "~" symbol in this parameter as it will not be recognized by python. <br /><br />
 
-use_python_path: If you use a specific version of python that separates from your default python configuration for reticulate, indicate the path to it. It will pass this parameter to reticulate's [use_python](https://rstudio.github.io/reticulate/reference/use_python.html) function. Otherwise just set this parameter to NULL. If you don't know how to locate your python path, see Q1 in "frequently asked questions".<br /><br />
+save_path: This is the path to the folder where you want to save your prediction results. <br /><br />
 
-scarches_path: This is the absolute path to the "scarches-0.4.0" folder which you previously downloded in the scArches installation part. <br /><br />
+scarches_path: This is the path to the "scarches-0.4.0" folder, a sub-folder stored in your "SPIDER" folder. <br /><br />
 
 all_trainable_proteins_gene_names: If you're using pretrained model, set this parameter to NULL. <br /><br />
 
@@ -129,15 +129,20 @@ The output files from SPIDER will be stored in your specified directory. The fil
 
 # Frequently asked questions
 #### Q1: 
-I have already executed the codes from step 1 & 2 without enconutering error, but when I run step 3, why do I still enconter the following error? 
+I have already executed the codes from step 1 & 2 without enconutering error, but when I run step 3, why do I still enconter the following errors such as: 
+```
+the No non-system installation of Python could be found.
+Would you like to download and install Miniconda? [Y/n]
+```
+and
 ```
 Error in py_module_import(module, convert = convert) : 
   ModuleNotFoundError: No module named 'scanpy'
 ```
 #### A1: 
-This is likely because you set the "use_python_path" parameter to NULL in step 3, however, you have multiple python installed on your computer, and the default python is not the same one as you installed in your SPIDER environment. To solve this problem, you should specify the correct python path using the "use_python_path" parameter. You can check the correct python path by doing the following:
+These errors are because you set the "use_python_path" parameter to NULL in step 3, however, you have multiple pythons on your computer, and your default python configuration for reticulate is different from the python installed in your SPIDER conda environment. To solve this problem, in the "use_python_path" parameter, you should specify the path to the python installed in your SPIDER conda environment. SPIDER will pass this parameter to [reticulate](https://rstudio.github.io/reticulate/)'s [use_python](https://rstudio.github.io/reticulate/reference/use_python.html) function. If you don't know how to locate your python path, you can locate it by doing the following:
 
-First open python in the activated conda environment by typing the following command in your terminal:
+First open python in your activated conda environment by typing the following command in your terminal:
 ```
 conda activate SPIDER
 python
@@ -148,7 +153,7 @@ Then type the following lines in python:
 import sys 
 sys.path[1]
 ```
-It should return a path in the format of '.../SPIDER/lib/python39.zip'. <br /> You should set your "use_python_path" parameter as '.../SPIDER/bin/python' <br /> (the "..." part shoule be the same as the returned path).
+It should return a path in the format of '.../SPIDER/lib/python39.zip'. <br /> You should set your "use_python_path" parameter as '.../SPIDER/bin/python' <br /> (the "..." parts are the same thing).
 
 #### Q2: 
 When I run the commands in 1.2, why do I encounter the following error?
