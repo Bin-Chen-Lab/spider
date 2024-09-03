@@ -179,7 +179,7 @@ It should return a path in the format of '.../SPIDER/lib/python39.zip'. <br /> Y
 
 
 #### Q2: 
-When I run the commands in 1.2, why do I encounter the following error?
+When I run the commands in [1.2](#12), why do I encounter the following error?
 ```
 PackagesNotFoundError: The following packages are not available from current channels:
 
