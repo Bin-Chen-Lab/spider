@@ -101,7 +101,7 @@ SPIDER_model_file_path: This is the absolute path to the "SPIDER_weight" folder,
 
 save_path: Enter a path to the directory where you want to save your prediction results. <br /><br />
 
-use_python_path: If you use a specific version of python that separates from your default python configuration for reticulate, indicate the path to it. It will pass this parameter to reticulate's "use_python" function. Otherwise just set this parameter to NULL. If you don't know how to locate your python path, see Q1 in "frequently asked questions".<br /><br />
+use_python_path: If you use a specific version of python that separates from your default python configuration for reticulate, indicate the path to it. It will pass this parameter to reticulate's [use_python](https://rstudio.github.io/reticulate/reference/use_python.html) function. Otherwise just set this parameter to NULL. If you don't know how to locate your python path, see Q1 in "frequently asked questions".<br /><br />
 
 scarches_path: This is the absolute path to the "scarches-0.4.0" folder which you previously downloded in the scArches installation part. <br /><br />
 
