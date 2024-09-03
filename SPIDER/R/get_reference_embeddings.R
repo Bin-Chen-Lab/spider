@@ -35,12 +35,14 @@ get_reference_embeddings <- function(reference,
   scvi$settings$progress_bar_style = 'tqdm'
   
   DefaultAssay(reference) = "RNA"
-  
+
+  setwd("../")
   if(use_cell_type == 'SingleR'){
     reference[['cell_type']] = read.csv(paste0(reference_celltype_save_path, 'reference_celltype_SingleR.csv'), stringsAsFactors = F, row.names = 1, check.names = F)$final_celltype
   }else{
     reference[['cell_type']] = reference_cell_type
   }
+  setwd('scarches-0.4.0/')
   #---------------------------------------------------------------
   RNA <- NormalizeData(reference, normalization.method = "LogNormalize", scale.factor = 10000)
   RNA <- FindVariableFeatures(RNA, selection.method = "vst", assay = "RNA", nfeatures = n_feature_RNA)
@@ -90,14 +92,15 @@ get_reference_embeddings <- function(reference,
   
   reference_latent = as.matrix(reference_latent)
   rownames(reference_latent) = colnames(RNA)
-  
-  setwd(SPIDER_model_file_path)
+
+  setwd("../")
+  #setwd(SPIDER_model_file_path)
   
   scanvae$save(SPIDER_model_file_path, overwrite=TRUE)
   
-  write.csv(reference_latent, 'reference_embeddings.csv')
+  write.csv(reference_latent, paste0(SPIDER_model_file_path, 'reference_embeddings.csv'))
   
-  write.csv(as.character(py_to_r(adata$var$index)), 'reference_SCANVI_top_HVGs.csv')
+  write.csv(as.character(py_to_r(adata$var$index)), paste0(SPIDER_model_file_path, 'reference_SCANVI_top_HVGs.csv'))
   
   return(reference_latent)
   
