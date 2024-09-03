@@ -106,11 +106,11 @@ tissue: The name of the source tissue of your transcriptome data (If your data c
 
 disease: The name of the disease state of your transcriptome data (If your data contain multiple diseases, subset your data by disease and run SPIDER separately on each subset). Use help(SPIDER_predict) to read more about this parameter. If your data's corresponding disease is NOT among the 4 default diseases ('healthy', 'mesothelioma', 'glioblastoma', 'leukemia'), use a new name that represents your data's corresponding disease.
 
-SPIDER_model_file_path: This is the path to the "SPIDER_weight" folder, a sub-folder stored in your "SPIDER" folder. Avoid using the "~" symbol in this parameter as it will not be recognized by python. <br /><br />
+SPIDER_model_file_path: This is the ABSOLUTE path to the "SPIDER_weight" folder, a sub-folder stored in your "SPIDER" folder. <br /><br />
 
-save_path: This is the path to the folder where you want to save your prediction results. <br /><br />
+save_path: This is the ABSOLUTE path to the folder where you want to save your prediction results. <br /><br />
 
-scarches_path: This is the path to the "scarches-0.4.0" folder, a sub-folder stored in your "SPIDER" folder. <br /><br />
+scarches_path: This is the ABSOLUTE path to the "scarches-0.4.0" folder, a sub-folder stored in your "SPIDER" folder. <br /><br />
 
 all_trainable_proteins_gene_names: If you're using pretrained model, set this parameter to NULL. <br /><br />
 
