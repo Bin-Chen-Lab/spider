@@ -61,20 +61,20 @@ You should first complete step 1 before you do this step 2. After you have creat
 conda activate SPIDER
 R
 ```
-Then install the SPIDER package in R by typing the following lines in R studio: <br />
+Then install the SPIDER package in R by typing the following lines in R: <br />
 ```
 devtools::install_github(repo = 'Bin-Chen-Lab/spider', subdir = '/SPIDER')
 ``` 
 
 # Step 3: SPIDER usage with sample data
 
-In R studio (opened in the activated conda environment), load our sample query transcriptomes:
+In R (opened in the activated conda environment), load our sample query transcriptomes:
 ```
 library(SPIDER)
 data("sample_query")
 ```
 
-In R studio, use SPIDER to predict on the sample query transcriptomes:
+In R, use SPIDER to predict on the sample query transcriptomes:
 ```
 SPIDER_predict ( seurat_data = RNA,
                  tissue = 'pancreas',
