@@ -2,7 +2,7 @@
 SPIDER (surface protein prediction using deep ensembles from single-cell RNA-seq) is a context-agnostic zero-shot deep ensemble model, which enables the large-scale prediction of cell surface protein abundance (e.g., can predict the abundance for >2,500 proteins) from single-cell transcriptomes. 
 
 # Step 1: Installation of dependency packages
-Before installing SPIDER, you will need to install all the dependent R and python packages, you can do this by using our environment file, which will create a conda environment named "SPIDER" with the required dependencies (If your computer does not have conda, you should go the the [conda website](https://conda.io/projects/conda/en/latest/index.html) to install conda first): <br /> <br />
+Before installing SPIDER, you will need to install all the dependent R and python packages ([dependent python and python packages requirements](https://github.com/Bin-Chen-Lab/spider/blob/fbcd525b52eb66a72b6257946bb30d1dff46737e/dependencies/python%20package%20dependencies), and [dependent R and R packages requirements](https://github.com/Bin-Chen-Lab/spider/blob/fbcd525b52eb66a72b6257946bb30d1dff46737e/dependencies/R%20package%20dependencies.R)). We provide a convenient way for you to install these dependencies via our environment file, which will create a conda environment named "SPIDER" with the required dependencies (If your computer does not have conda, you should go the the [conda website](https://conda.io/projects/conda/en/latest/index.html) to install conda first): <br /> <br />
 
 ## 1.1
 In your computer's terminal, first type the following commands. The downloaded folder will also contain SPIDER's pretrained weights: <br />
@@ -17,35 +17,17 @@ git pull origin main
 ```
 
 ## 1.2 
-For users who are not using osx-arm64 for their computer system, they can use our yaml file to conveniently install all the dependency packages. To do this, in your terminal, type the following:
+For users who are NOT using osx-arm64 for their computer system, they can use our yaml file to conveniently install all the dependency packages. To do this, in your terminal, type the following:
 
 ```
 conda env create -f SPIDER_python/SPIDER_env/SPIDER_environment_test_basic_all.yaml
 ```
 
-## 1.3 (optional)
-For some users who fail to execute our yaml file in 1.2, with respect to different common issues, we provide corresponding solutions to install the dependency packages:<br />
-
-### 1.3.1 For users who use osx-arm64 for their computer system
-osx-arm64 is incompatible with the Bioconda approach of installation, therefore, these users cannot directly run the yaml file in 1.2. Also see Q2 in the "frequently asked questions" section below. If you use osx-arm64 and directly run the yaml file as in 1.2, you are likely to encounter the error shown in Q2. Instead, you should replace the codes in 1.2 with the following codes:
+## 1.3 (optional) For users who use osx-arm64 for their computer system
+osx-arm64 is incompatible with the Bioconda approach of installation, therefore, these users may fail to execute our yaml file in 1.2. Also see Q2 in the "frequently asked questions" section below. If you use osx-arm64 and directly run the yaml file as in 1.2, you are likely to encounter the error shown in Q2. Instead, you can replace the codes in 1.2 with the following codes:
 ```
 CONDA_SUBDIR=osx-64 conda env create -f SPIDER_python/SPIDER_env/SPIDER_environment_test_basic_all_osx-arm64.yaml
 ```
-
-### 1.3.2 For users who have other installation issues with certain dependency packages
-We also provide a manual way for these users to download dependency packages. These codes of manual installation have the same effect as the yaml file in 1.2. First, create a conda environment with specified R and python versions by typing the following commands in your terminal:
-
-```
-conda create -n SPIDER python=3.9.2 
-conda install conda-forge::r-base=4.1.1
-```
-
-Then, in your terminal, run the following commands in the following link file to manually install all the python dependency packages: <br />
-https://github.com/Bin-Chen-Lab/spider/blob/fbcd525b52eb66a72b6257946bb30d1dff46737e/dependencies/python%20package%20dependencies <br />
-
-Then, in your R studio, run the R lines as in the following link file to manually install all the R dependency packages: <br />
-https://github.com/Bin-Chen-Lab/spider/blob/fbcd525b52eb66a72b6257946bb30d1dff46737e/dependencies/R%20package%20dependencies.R <br />
-
 
 ## 1.4 
 In your terminal, type the following commands to download the scArches package in the "SPIDER" folder. It will create another folder "scarches-0.4.0" there:
@@ -163,7 +145,7 @@ PackagesNotFoundError: The following packages are not available from current cha
   - bioconductor-singler
 ```
 #### A2: 
-This is likely because you use osx-arm64 for your computer system, which is incompatible with the Bioconda approach of installing the dependency packages. You should run the commands following step 1.3.1 instead of 1.2.
+This is likely because you use osx-arm64 for your computer system, which is incompatible with the Bioconda approach of installing the dependency packages. You should run the commands following step 1.3 instead of 1.2.
 
 #### Q3:
 Can I run SPIDER on mouse scRNA-seq data?
