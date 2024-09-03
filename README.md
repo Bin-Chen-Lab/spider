@@ -48,7 +48,7 @@ https://github.com/Bin-Chen-Lab/spider/blob/fbcd525b52eb66a72b6257946bb30d1dff46
 
 
 ## 1.4 
-In your terminal, type the following commands to download the scArches package. It will create a folder "scarches-0.4.0":
+In your terminal, type the following commands to download the scArches package in the SPIDER folder. It will create another folder "scarches-0.4.0":
 ```
 wget https://github.com/theislab/scarches/archive/refs/tags/v0.4.0.zip
 unzip 'v0.4.0.zip'
