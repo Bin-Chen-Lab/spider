@@ -99,7 +99,10 @@ help(SPIDER_predict)
 
 # Step 4: Downstream applications with SPIDER's output files
 
-The output files from SPIDER will be stored in your specified directory. The file "all_seen_proteins_predicted.csv" contains the predicted surface abundance for all the seen proteins. The file "all_unseen_proteins_predicted.csv" contains the predicted surface abundance for all the unseen proteins. The file "confidence_score_all_unseen_proteins.csv" contains the estimated prediction confidence for all the unseen proteins.
+The output files from SPIDER will be stored in your specified directory. <br />
+The file "all_seen_proteins_predicted.csv" contains the predicted surface abundance for all the seen proteins. <br />
+The file "all_unseen_proteins_predicted.csv" contains the predicted surface abundance for all the unseen proteins. <br />
+The file "confidence_score_all_unseen_proteins.csv" contains the estimated prediction confidence for all the unseen proteins.
 
 # Frequently asked questions
 #### Q1: 
