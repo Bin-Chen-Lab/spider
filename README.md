@@ -68,12 +68,14 @@ devtools::install_github(repo = 'Bin-Chen-Lab/spider', subdir = '/SPIDER')
 Your system may ask you "Enter one or more numbers, or an empty line to skip updates", just enter an empty line to skip updates.
 
 # Step 3: SPIDER usage with sample data
-First, let's create an empty folder for saving your results. In your computer's terminal, use the following command to create another folder named SPIDER_results in your SPIDER folder: <br />
+First, let's create an empty folder for saving your results. In your computer's terminal, use the following command to create another folder named SPIDER_results in your SPIDER folder, and then open R in the activated conda environment: <br />
 ```
 mkdir SPIDER_results
+conda activate SPIDER
+R
 ```
 
-Then, in R (opened in the activated conda environment), load our sample query transcriptomes:
+Then in R (opened in the activated conda environment), load our sample query transcriptomes:
 ```
 library(SPIDER)
 data("sample_query")
@@ -135,12 +137,13 @@ Error in py_module_import(module, convert = convert) :
 #### A1: 
 This is likely because you set the "use_python_path" parameter to NULL in step 3, however, you have multiple python installed on your computer, and the default python is not the same one as you installed in your SPIDER environment. To solve this problem, you should specify the correct python path using the "use_python_path" parameter. You can check the correct python path by doing the following:
 
-First enter the conda environment for SPIDER by typing the following command in the terminal:
+First open python in the activated conda environment by typing the following command in your terminal:
 ```
 conda activate SPIDER
+python
 ```
 
-Then open python in the activated conda environment, and type the following codes in python:
+Then type the following lines in python:
 ```
 import sys 
 sys.path[1]
