@@ -116,24 +116,29 @@ Note that you may need to modify "use_python_path = NULL" here according to your
 
 For other commonly used parameters here:<br />
 
+"tissue":
 <p align="justify">
-"tissue": The name of the source tissue of your transcriptome data (If your data contain multiple tissues, subset your data by tissue and run SPIDER separately on each subset). Use help(SPIDER_predict) to read more about this parameter. If your data's corresponding tissue is NOT among the 5 default tissues ('bone marrow', 'brain', 'blood', 'pleura', 'peritoneum'), use a new name that represents your data's corresponding tissue. <br /> 
+The name of the source tissue of your transcriptome data (If your data contain multiple tissues, subset your data by tissue and run SPIDER separately on each subset). Use help(SPIDER_predict) to read more about this parameter. If your data's corresponding tissue is NOT among the 5 default tissues ('bone marrow', 'brain', 'blood', 'pleura', 'peritoneum'), use a new name that represents your data's corresponding tissue. <br /> 
 </p>
 
+"disease":
 <p align="justify">
-"disease": The name of the disease state of your transcriptome data (If your data contain multiple diseases, subset your data by disease and run SPIDER separately on each subset). Use help(SPIDER_predict) to read more about this parameter. If your data's corresponding disease is NOT among the 4 default diseases ('healthy', 'mesothelioma', 'glioblastoma', 'leukemia'), use a new name that represents your data's corresponding disease.<br />
+The name of the disease state of your transcriptome data (If your data contain multiple diseases, subset your data by disease and run SPIDER separately on each subset). Use help(SPIDER_predict) to read more about this parameter. If your data's corresponding disease is NOT among the 4 default diseases ('healthy', 'mesothelioma', 'glioblastoma', 'leukemia'), use a new name that represents your data's corresponding disease.<br />
 </p>
 
+"SPIDER_model_file_path": 
 <p align="justify">
-"SPIDER_model_file_path": This is the ABSOLUTE path to the "SPIDER_weight" folder, a sub-folder stored in your "SPIDER" folder. Avoid using the "~" symbol to locate your path. <br />
+This is the ABSOLUTE path to the "SPIDER_weight" folder, a sub-folder stored in your "SPIDER" folder. Avoid using the "~" symbol to locate your path. <br />
 </p>
 
+"save_path": 
 <p align="justify">
-"save_path": This is the ABSOLUTE path to the folder where you want to save your prediction results. Avoid using the "~" symbol to locate your path.<br />
+This is the ABSOLUTE path to the folder where you want to save your prediction results. Avoid using the "~" symbol to locate your path.<br />
 </p>
 
+"scarches_path": 
 <p align="justify">
-"scarches_path": This is the ABSOLUTE path to the "scarches-0.4.0" folder, a sub-folder stored in your "SPIDER" folder. Avoid using the "~" symbol to locate your path. <br />
+This is the ABSOLUTE path to the "scarches-0.4.0" folder, a sub-folder stored in your "SPIDER" folder. Avoid using the "~" symbol to locate your path. <br />
 </p>
 
 You can also type the following line in R to access the help file and check more details for other parameters: <br />
