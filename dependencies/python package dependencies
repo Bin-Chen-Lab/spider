@@ -15,7 +15,7 @@ scikit-learn   1.0.2
 scArches   0.4.0
 
 #---------------------------------------------------------------------------------------------------------------
-#You can type the following commands in your terminal to install dependent python packages before installing SPIDER:
+#You can type the following demo codes in your terminal to install dependent python packages before installing SPIDER:
 
 #Install scArches:
 wget https://github.com/theislab/scarches/archive/refs/tags/v0.4.0.zip
