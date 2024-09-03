@@ -35,13 +35,15 @@ get_query_embeddings <- function(seurat_data, save_path, use_pretrain, SPIDER_mo
   
   DefaultAssay(seurat_data) = "RNA"
   RNA <- seurat_data #The query transcriptomes
-  
+
+  setwd("../")
   if(use_pretrain == 'T'){
     save_top_1000_HVGs = read.csv(paste0(SPIDER_model_file_path, 'training_combined_6_datasets_RNA_SCANVI_latent_128dim_20230115/top_1000_HVGs_training_combined_6_datasets_RNA_SCANVI_latent_128dim_20230115.csv'), stringsAsFactors = F, row.names = 1)$x
   }
   if(use_pretrain == 'F'){
     save_top_1000_HVGs = read.csv(paste0(SPIDER_model_file_path, 'reference_SCANVI_top_HVGs.csv'), stringsAsFactors = F, row.names = 1)$x
   }
+  setwd("scarches-0.4.0/")
 
   if(length(setdiff(save_top_1000_HVGs, rownames(RNA))) != 0){
     non_exist_genes <- setdiff(save_top_1000_HVGs, rownames(RNA)) 
@@ -77,13 +79,15 @@ get_query_embeddings <- function(seurat_data, save_path, use_pretrain, SPIDER_mo
   
   condition_key = 'study'
   cell_type_key = 'cell_type'
-  
+
+  setwd("../")
   if(use_pretrain == 'T'){
   ref_model_path = paste0(SPIDER_model_file_path, 'training_combined_6_datasets_RNA_SCANVI_latent_128dim_20230115/')
   }
   if(use_pretrain == 'F'){
     ref_model_path = paste0(SPIDER_model_file_path)
   }
+  setwd("scarches-0.4.0/")
   
   #Perform surgery on reference model and train on query dataset without cell type labels
   model = sca$models$SCANVI$load_query_data(
@@ -110,6 +114,7 @@ get_query_embeddings <- function(seurat_data, save_path, use_pretrain, SPIDER_mo
   query_latent = model$get_latent_representation()
   query_latent = as.matrix(query_latent)
   rownames(query_latent) = colnames(RNA)
+  setwd("../")
   write.csv(query_latent, paste0(save_path, 'query_embeddings.csv'))
   
   return(query_latent)
