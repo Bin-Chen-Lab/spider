@@ -64,7 +64,8 @@ R
 Then install the SPIDER package in R by typing the following lines in R: <br />
 ```
 devtools::install_github(repo = 'Bin-Chen-Lab/spider', subdir = '/SPIDER')
-``` 
+```
+Your system may ask you "Enter one or more numbers, or an empty line to skip updates", just enter an empty line to skip updates.
 
 # Step 3: SPIDER usage with sample data
 
