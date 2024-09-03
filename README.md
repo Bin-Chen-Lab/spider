@@ -186,8 +186,7 @@ PackagesNotFoundError: The following packages are not available from current cha
   - bioconductor-singler
 ```
 #### A2: 
-<p align="justify">
-This is likely because you use osx-arm64 for your computer system, which is incompatible with the Bioconda approach of installing the dependency packages. </p>
+This is likely because you use osx-arm64 for your computer system, which is incompatible with the Bioconda approach of installing the dependency packages. 
 You should run the commands following step [1.3](#13-optional-for-osx-arm64-users-who-fail-to-execute-12) instead of 1.2.
 
 #### Q3:
