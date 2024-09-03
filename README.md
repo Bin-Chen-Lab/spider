@@ -5,7 +5,7 @@ SPIDER (surface protein prediction using deep ensembles from single-cell RNA-seq
 Before installing SPIDER, you will need to install all the dependent R and python packages, you can do this by using our environment file, which will create a conda environment named "SPIDER" with the required dependencies (If your computer does not have conda, you should go the the [conda website](https://conda.io/projects/conda/en/latest/index.html) to install conda first): <br /> <br />
 
 ## 1.1
-In the terminal, first type the following commands. The downloaded folder will also contain SPIDER's pretrained weights: <br />
+In your computer's terminal, first type the following commands. The downloaded folder will also contain SPIDER's pretrained weights: <br />
 ```
 mkdir SPIDER
 cd SPIDER
@@ -14,7 +14,7 @@ git remote add -f origin https://github.com/Bin-Chen-Lab/spider.git
 git config core.sparseCheckout true
 echo "SPIDER_python/" >> .git/info/sparse-checkout
 git pull origin main
-``` 
+```
 
 ## 1.2 
 For users who are not using osx-arm64 for their computer system, they can use our yaml file to conveniently install all the dependency packages. To do this, in your terminal, type the following:
@@ -68,8 +68,12 @@ devtools::install_github(repo = 'Bin-Chen-Lab/spider', subdir = '/SPIDER')
 Your system may ask you "Enter one or more numbers, or an empty line to skip updates", just enter an empty line to skip updates.
 
 # Step 3: SPIDER usage with sample data
+First, let's create an empty folder for saving your results. In your computer's terminal, use the following command to create another folder named SPIDER_results in your SPIDER folder: <br />
+```
+mkdir SPIDER_results
+```
 
-In R (opened in the activated conda environment), load our sample query transcriptomes:
+Then, in R (opened in the activated conda environment), load our sample query transcriptomes:
 ```
 library(SPIDER)
 data("sample_query")
@@ -80,14 +84,14 @@ In R, use SPIDER to predict on the sample query transcriptomes:
 SPIDER_predict ( seurat_data = RNA,
                  tissue = 'pancreas',
                  disease = 'healthy',
-                 SPIDER_model_file_path = '.../SPIDER/SPIDER_python/SPIDER_weight/', 
+                 SPIDER_model_file_path = 'SPIDER_python/SPIDER_weight/', 
                  use_cell_type = 'SingleR',
                  query_cell_type = NULL,
                  protein = 'All',
                  use_pretrain = 'T', #Using pretrained SPIDER
-                 save_path = '/.../', 
-                 use_python_path = '/...', 
-                 scarches_path = '.../scarches-0.4.0/',
+                 save_path = 'SPIDER_results/', 
+                 use_python_path = NULL, 
+                 scarches_path = 'scarches-0.4.0/',
                  all_trainable_proteins_gene_names = NULL, 
                  file_A_B_C_matching_table = NULL,
                  n_ensemble_members = 8 ) 
