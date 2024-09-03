@@ -72,15 +72,11 @@ SPIDER_predict ( seurat_data = RNA,
                  disease = 'healthy',
                  SPIDER_model_file_path = paste0(prefix, '/SPIDER_python/SPIDER_weight/'), 
                  use_cell_type = 'SingleR',
-                 query_cell_type = NULL,
                  protein = 'All',
                  use_pretrain = 'T', #Using pretrained SPIDER
                  save_path = paste0(prefix, '/SPIDER_results/'), 
                  use_python_path = NULL, 
-                 scarches_path = paste0(prefix, '/scarches-0.4.0/'),
-                 all_trainable_proteins_gene_names = NULL, 
-                 file_A_B_C_matching_table = NULL,
-                 n_ensemble_members = 8 ) 
+                 scarches_path = paste0(prefix, '/scarches-0.4.0/')) 
 ```
 Note that you may need to modify "use_python_path = NULL" here according to your system setting. SPIDER will pass this parameter to [reticulate](https://rstudio.github.io/reticulate/)'s [use_python](https://rstudio.github.io/reticulate/reference/use_python.html) function. You can use "use_python_path = NULL" if your default python configuration for reticulate is the same as the python installed in your SPIDER conda environment. However, if your default python configuration for reticulate is different from the python installed in your SPIDER conda environment, you'll need to modify the "use_python_path" parameter to indicate the path to the python installed in your SPIDER conda environment. If you don't know how to locate your python path, see Q1 in "frequently asked questions" section below.<br /><br /> 
 
@@ -96,13 +92,7 @@ save_path: This is the ABSOLUTE path to the folder where you want to save your p
 
 scarches_path: This is the ABSOLUTE path to the "scarches-0.4.0" folder, a sub-folder stored in your "SPIDER" folder. Avoid using the "~" symbol to locate your path. <br /><br />
 
-all_trainable_proteins_gene_names: If you're using pretrained model, set this parameter to NULL. <br /><br />
-
-file_A_B_C_matching_table: If you're using pretrained model, set this parameter to NULL. <br /><br />
-
-n_ensemble_members: The number of ensemble members. The default setting is 8 as in our paper. <br /><br />
-
-You can also type the following line in R to access the help file and check more details: <br />
+You can also type the following line in R to access the help file and check more details for other parameters: <br />
 ```
 help(SPIDER_predict)
 ```
