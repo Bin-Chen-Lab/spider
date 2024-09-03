@@ -111,19 +111,19 @@ SPIDER_predict ( seurat_data = RNA,
                  scarches_path = paste0(prefix, '/scarches-0.4.0/')) 
 ```
 <p align="justify">
-Note that you may need to modify **"use_python_path = NULL"** here according to your system setting. SPIDER will pass this parameter to [reticulate](https://rstudio.github.io/reticulate/)'s [use_python](https://rstudio.github.io/reticulate/reference/use_python.html) function. You can use **"use_python_path = NULL"** if your default python configuration for reticulate is the same as the python installed in your SPIDER conda environment. However, if your default python configuration for reticulate is different from the python installed in your SPIDER conda environment, you'll need to modify the **use_python_path** parameter to indicate the path to the python installed in your SPIDER conda environment. If you don't know how to locate your python path, see [Q1](#q1) in [frequently asked questions](#frequently-asked-questions) section below.<br /><br /> 
+Note that you may need to modify **"use_python_path = NULL"** here according to your system setting. SPIDER will pass this parameter to [reticulate](https://rstudio.github.io/reticulate/)'s [use_python](https://rstudio.github.io/reticulate/reference/use_python.html) function. You can use **"use_python_path = NULL"** if your default python configuration for reticulate is the same as the python installed in your SPIDER conda environment. However, if your default python configuration for reticulate is different from the python installed in your SPIDER conda environment, you'll need to modify the **use_python_path** parameter to indicate the path to the python installed in your SPIDER conda environment. If you don't know how to locate your python path, see [Q1](#q1) in [frequently asked questions](#frequently-asked-questions) section below.<br /> 
 
-For other commonly used parameters here:<br /><br />
+For other commonly used parameters here:<br />
 
-**tissue**: The name of the source tissue of your transcriptome data (If your data contain multiple tissues, subset your data by tissue and run SPIDER separately on each subset). Use help(SPIDER_predict) to read more about this parameter. If your data's corresponding tissue is NOT among the 5 default tissues ('bone marrow', 'brain', 'blood', 'pleura', 'peritoneum'), use a new name that represents your data's corresponding tissue. <br /><br />
+**tissue**: The name of the source tissue of your transcriptome data (If your data contain multiple tissues, subset your data by tissue and run SPIDER separately on each subset). Use help(SPIDER_predict) to read more about this parameter. If your data's corresponding tissue is NOT among the 5 default tissues ('bone marrow', 'brain', 'blood', 'pleura', 'peritoneum'), use a new name that represents your data's corresponding tissue. <br />
 
-**disease**: The name of the disease state of your transcriptome data (If your data contain multiple diseases, subset your data by disease and run SPIDER separately on each subset). Use help(SPIDER_predict) to read more about this parameter. If your data's corresponding disease is NOT among the 4 default diseases ('healthy', 'mesothelioma', 'glioblastoma', 'leukemia'), use a new name that represents your data's corresponding disease.
+**disease**: The name of the disease state of your transcriptome data (If your data contain multiple diseases, subset your data by disease and run SPIDER separately on each subset). Use help(SPIDER_predict) to read more about this parameter. If your data's corresponding disease is NOT among the 4 default diseases ('healthy', 'mesothelioma', 'glioblastoma', 'leukemia'), use a new name that represents your data's corresponding disease.<br />
 
-**SPIDER_model_file_path**: This is the ABSOLUTE path to the "SPIDER_weight" folder, a sub-folder stored in your "SPIDER" folder. Avoid using the "~" symbol to locate your path. <br /><br />
+**SPIDER_model_file_path**: This is the ABSOLUTE path to the "SPIDER_weight" folder, a sub-folder stored in your "SPIDER" folder. Avoid using the "~" symbol to locate your path. <br />
 
-**save_path**: This is the ABSOLUTE path to the folder where you want to save your prediction results. Avoid using the "~" symbol to locate your path.<br /><br />
+**save_path**: This is the ABSOLUTE path to the folder where you want to save your prediction results. Avoid using the "~" symbol to locate your path.<br />
 
-**scarches_path**: This is the ABSOLUTE path to the "scarches-0.4.0" folder, a sub-folder stored in your "SPIDER" folder. Avoid using the "~" symbol to locate your path. <br /><br />
+**scarches_path**: This is the ABSOLUTE path to the "scarches-0.4.0" folder, a sub-folder stored in your "SPIDER" folder. Avoid using the "~" symbol to locate your path. <br />
 
 You can also type the following line in R to access the help file and check more details for other parameters: <br />
 </p>
@@ -133,11 +133,12 @@ help(SPIDER_predict)
 ```
 
 # Step 4: Downstream applications with SPIDER's output files
-
+<p align="justify">
 The output files from SPIDER will be stored in your specified directory. <br />
 The file **"all_seen_proteins_predicted.csv"** contains the predicted surface abundance for all the seen proteins. <br />
 The file **"all_unseen_proteins_predicted.csv"** contains the predicted surface abundance for all the unseen proteins. <br />
 The file **"confidence_score_all_unseen_proteins.csv"** contains the estimated prediction confidence for all the unseen proteins.
+</p>
 
 # Frequently asked questions
 #### Q1: 
@@ -152,9 +153,12 @@ Error in py_module_import(module, convert = convert) :
   ModuleNotFoundError: No module named 'scanpy'
 ```
 #### A1: 
-These errors are because you set the "use_python_path" parameter to NULL in step 3, however, you have multiple pythons on your computer, and your default python configuration for [reticulate](https://rstudio.github.io/reticulate/) is different from the python installed in your SPIDER conda environment. To solve this problem, in the "use_python_path" parameter, you should specify the path to the python installed in your SPIDER conda environment. SPIDER will pass this parameter to [reticulate](https://rstudio.github.io/reticulate/)'s [use_python](https://rstudio.github.io/reticulate/reference/use_python.html) function. If you don't know how to locate your python path, you can locate it by doing the following:
+<p align="justify">
+These errors are because you set the "use_python_path" parameter to NULL in step 3, however, you have multiple pythons on your computer, and your default python configuration for [reticulate](https://rstudio.github.io/reticulate/) is different from the python installed in your SPIDER conda environment. To solve this problem, in the "use_python_path" parameter, you should specify the path to the python installed in your SPIDER conda environment. SPIDER will pass this parameter to [reticulate](https://rstudio.github.io/reticulate/)'s [use_python](https://rstudio.github.io/reticulate/reference/use_python.html) function. If you don't know how to locate your python path, you can locate it by doing the following:<br />
 
 First open python in your activated conda environment by typing the following command in your terminal:
+</p>
+
 ```
 conda activate SPIDER
 python
@@ -165,7 +169,10 @@ Then type the following lines in python:
 import sys 
 sys.path[1]
 ```
+<p align="justify">
 It should return a path in the format of '.../SPIDER/lib/python39.zip'. <br /> You should set your "use_python_path" parameter as '.../SPIDER/bin/python' <br /> (the "..." parts are the same thing).
+</p>
+
 
 #### Q2: 
 When I run the commands in 1.2, why do I encounter the following error?
@@ -175,18 +182,27 @@ PackagesNotFoundError: The following packages are not available from current cha
   - bioconductor-singler
 ```
 #### A2: 
+<p align="justify">
 This is likely because you use osx-arm64 for your computer system, which is incompatible with the Bioconda approach of installing the dependency packages. You should run the commands following step 1.3 instead of 1.2.
+</p>
 
 #### Q3:
 Can I run SPIDER on mouse scRNA-seq data?
 
 #### A3:
+<p align="justify">
 Yes, you can run SPIDER on other species' scRNA-seq data besides human data. But note that if you choose to use our pretrained SPIDER model (i.e., use_pretrain = 'T') to directly predict on other species' data, you will need to convert the gene names in your scRNA-seq data to human gene names (uppercase letters) first before you run SPIDER on your data.
+</p>
 
 # Reproducibility
+<p align="justify">
 To find code to reproduce the results we generated in the manuscript, please visit [this separate github repository](https://github.com/Bin-Chen-Lab/spider_analysis/), which provides all code necessary to reproduce our results.
+</p>
 
 # Citation
+<p align="justify">
 please cite this repo https://github.com/Bin-Chen-Lab/spider with authors (Ruoqiao Chen (chenruo4@msu.edu), Jiayu Zhou, Bin Chen (chenbi12@msu.edu), Michigan State University).
+</p>
+
 
 
