@@ -65,17 +65,19 @@ data("sample_query")
 
 In R, use SPIDER to predict on the sample query transcriptomes:
 ```
+prefix = getwd() #The SPIDER_predict function uses ABSOLUTE paths as input parameters
+
 SPIDER_predict ( seurat_data = RNA,
                  tissue = 'pancreas',
                  disease = 'healthy',
-                 SPIDER_model_file_path = paste0(getwd(), '/SPIDER_python/SPIDER_weight/'), 
+                 SPIDER_model_file_path = paste0(prefix, '/SPIDER_python/SPIDER_weight/'), 
                  use_cell_type = 'SingleR',
                  query_cell_type = NULL,
                  protein = 'All',
                  use_pretrain = 'T', #Using pretrained SPIDER
-                 save_path = paste0(getwd(), '/SPIDER_results/'), 
+                 save_path = paste0(prefix, '/SPIDER_results/'), 
                  use_python_path = NULL, 
-                 scarches_path = paste0(getwd(), '/scarches-0.4.0/'),
+                 scarches_path = paste0(prefix, '/scarches-0.4.0/'),
                  all_trainable_proteins_gene_names = NULL, 
                  file_A_B_C_matching_table = NULL,
                  n_ensemble_members = 8 ) 
