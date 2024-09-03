@@ -53,7 +53,7 @@ In your terminal, type the following commands to download the scArches package i
 wget https://github.com/theislab/scarches/archive/refs/tags/v0.4.0.zip
 unzip 'v0.4.0.zip'
 ``` 
-(Alternatively, you can also simply open the link in your browser and directly download the folder without wget.)
+(Alternatively, you can also simply open the link in your browser and directly download the zip file without wget. Munually unzip the file and put the scarches-0.4.0 folder in your SPIDER folder.)
 
 # Step 2: Installation of SPIDER
 You should first complete step 1 before you do this step 2. After you have created the conda environment with all the dependency packages installed as previously described, first enter the conda environment by typing the following command in the terminal:
