@@ -68,7 +68,7 @@ devtools::install_github(repo = 'Bin-Chen-Lab/spider', subdir = '/SPIDER')
 Your system may ask you "Enter one or more numbers, or an empty line to skip updates", just enter an empty line to skip updates.
 
 # Step 3: SPIDER usage with sample data
-First, let's create an empty folder for saving your results. In your computer's terminal, use the following command to create another folder named SPIDER_results in your SPIDER folder, and then open R in the activated conda environment: <br />
+First, let's create an empty folder for saving your results. In your computer's terminal, use the following command to create another folder named SPIDER_results in your "SPIDER" folder, and then open R in the activated conda environment: <br />
 ```
 mkdir SPIDER_results
 conda activate SPIDER
@@ -86,14 +86,14 @@ In R, use SPIDER to predict on the sample query transcriptomes:
 SPIDER_predict ( seurat_data = RNA,
                  tissue = 'pancreas',
                  disease = 'healthy',
-                 SPIDER_model_file_path = 'SPIDER_python/SPIDER_weight/', 
+                 SPIDER_model_file_path = paste0(getwd(), '/SPIDER_python/SPIDER_weight/'), 
                  use_cell_type = 'SingleR',
                  query_cell_type = NULL,
                  protein = 'All',
                  use_pretrain = 'T', #Using pretrained SPIDER
-                 save_path = 'SPIDER_results/', 
+                 save_path = paste0(getwd(), '/SPIDER_results/'), 
                  use_python_path = NULL, 
-                 scarches_path = 'scarches-0.4.0/',
+                 scarches_path = paste0(getwd(), '/scarches-0.4.0/'),
                  all_trainable_proteins_gene_names = NULL, 
                  file_A_B_C_matching_table = NULL,
                  n_ensemble_members = 8 ) 
@@ -106,11 +106,11 @@ tissue: The name of the source tissue of your transcriptome data (If your data c
 
 disease: The name of the disease state of your transcriptome data (If your data contain multiple diseases, subset your data by disease and run SPIDER separately on each subset). Use help(SPIDER_predict) to read more about this parameter. If your data's corresponding disease is NOT among the 4 default diseases ('healthy', 'mesothelioma', 'glioblastoma', 'leukemia'), use a new name that represents your data's corresponding disease.
 
-SPIDER_model_file_path: This is the ABSOLUTE path to the "SPIDER_weight" folder, a sub-folder stored in your "SPIDER" folder. <br /><br />
+SPIDER_model_file_path: This is the ABSOLUTE path to the "SPIDER_weight" folder, a sub-folder stored in your "SPIDER" folder. Avoid using the "~" symbol to locate your path. <br /><br />
 
-save_path: This is the ABSOLUTE path to the folder where you want to save your prediction results. <br /><br />
+save_path: This is the ABSOLUTE path to the folder where you want to save your prediction results. Avoid using the "~" symbol to locate your path.<br /><br />
 
-scarches_path: This is the ABSOLUTE path to the "scarches-0.4.0" folder, a sub-folder stored in your "SPIDER" folder. <br /><br />
+scarches_path: This is the ABSOLUTE path to the "scarches-0.4.0" folder, a sub-folder stored in your "SPIDER" folder. Avoid using the "~" symbol to locate your path. <br /><br />
 
 all_trainable_proteins_gene_names: If you're using pretrained model, set this parameter to NULL. <br /><br />
 
