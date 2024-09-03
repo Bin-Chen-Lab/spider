@@ -56,12 +56,12 @@ unzip 'v0.4.0.zip'
 (Alternatively, you can also simply open the link in your browser and directly download the zip file without wget. Munually unzip the file and put the scarches-0.4.0 folder in your SPIDER folder.)
 
 # Step 2: Installation of SPIDER
-You should first complete step 1 before you do this step 2. After you have created the conda environment with all the dependency packages installed as previously described, first enter the conda environment by typing the following command in the terminal:
+You should first complete step 1 before you do this step 2. After you have created the conda environment with all the dependency packages installed as previously described, first enter R in the activated conda environment by typing the following commands in the terminal:
 ```
 conda activate SPIDER
+R
 ```
-To install the SPIDER package: <br />
-Open your R studio in the activated conda environment, type the following lines in R studio: <br />
+Then install the SPIDER package in R by typing the following lines in R studio: <br />
 ```
 devtools::install_github(repo = 'Bin-Chen-Lab/spider', subdir = '/SPIDER')
 ``` 
