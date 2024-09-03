@@ -9,7 +9,10 @@ Before installing SPIDER, you will need to install all the dependent R and pytho
 </p>
 
 ## 1.1
+<p align="justify">
 In your computer's terminal, first type the following commands. The downloaded folder will also contain SPIDER's pretrained weights: <br />
+</p>
+  
 ```
 mkdir SPIDER
 cd SPIDER
