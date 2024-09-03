@@ -117,16 +117,24 @@ Note that you may need to modify "use_python_path = NULL" here according to your
 For other commonly used parameters here:<br />
 
 <p align="justify">
-"tissue": The name of the source tissue of your transcriptome data (If your data contain multiple tissues, subset your data by tissue and run SPIDER separately on each subset). Use help(SPIDER_predict) to read more about this parameter. If your data's corresponding tissue is NOT among the 5 default tissues ('bone marrow', 'brain', 'blood', 'pleura', 'peritoneum'), use a new name that represents your data's corresponding tissue. <br /> </p>
+"tissue": The name of the source tissue of your transcriptome data (If your data contain multiple tissues, subset your data by tissue and run SPIDER separately on each subset). Use help(SPIDER_predict) to read more about this parameter. If your data's corresponding tissue is NOT among the 5 default tissues ('bone marrow', 'brain', 'blood', 'pleura', 'peritoneum'), use a new name that represents your data's corresponding tissue. <br /> 
 </p>
 
-**disease**: The name of the disease state of your transcriptome data (If your data contain multiple diseases, subset your data by disease and run SPIDER separately on each subset). Use help(SPIDER_predict) to read more about this parameter. If your data's corresponding disease is NOT among the 4 default diseases ('healthy', 'mesothelioma', 'glioblastoma', 'leukemia'), use a new name that represents your data's corresponding disease.<br />
+<p align="justify">
+"disease": The name of the disease state of your transcriptome data (If your data contain multiple diseases, subset your data by disease and run SPIDER separately on each subset). Use help(SPIDER_predict) to read more about this parameter. If your data's corresponding disease is NOT among the 4 default diseases ('healthy', 'mesothelioma', 'glioblastoma', 'leukemia'), use a new name that represents your data's corresponding disease.<br />
+</p>
 
-**SPIDER_model_file_path**: This is the ABSOLUTE path to the "SPIDER_weight" folder, a sub-folder stored in your "SPIDER" folder. Avoid using the "~" symbol to locate your path. <br />
+<p align="justify">
+"SPIDER_model_file_path": This is the ABSOLUTE path to the "SPIDER_weight" folder, a sub-folder stored in your "SPIDER" folder. Avoid using the "~" symbol to locate your path. <br />
+</p>
 
-**save_path**: This is the ABSOLUTE path to the folder where you want to save your prediction results. Avoid using the "~" symbol to locate your path.<br />
+<p align="justify">
+"save_path": This is the ABSOLUTE path to the folder where you want to save your prediction results. Avoid using the "~" symbol to locate your path.<br />
+</p>
 
-**scarches_path**: This is the ABSOLUTE path to the "scarches-0.4.0" folder, a sub-folder stored in your "SPIDER" folder. Avoid using the "~" symbol to locate your path. <br />
+<p align="justify">
+"scarches_path": This is the ABSOLUTE path to the "scarches-0.4.0" folder, a sub-folder stored in your "SPIDER" folder. Avoid using the "~" symbol to locate your path. <br />
+</p>
 
 You can also type the following line in R to access the help file and check more details for other parameters: <br />
 
@@ -155,11 +163,9 @@ Error in py_module_import(module, convert = convert) :
   ModuleNotFoundError: No module named 'scanpy'
 ```
 #### A1: 
-<p align="justify">
 These errors are because you set the "use_python_path" parameter to NULL in step 3, however, you have multiple pythons on your computer, and your default python configuration for [reticulate](https://rstudio.github.io/reticulate/) is different from the python installed in your SPIDER conda environment. To solve this problem, in the "use_python_path" parameter, you should specify the path to the python installed in your SPIDER conda environment. SPIDER will pass this parameter to [reticulate](https://rstudio.github.io/reticulate/)'s [use_python](https://rstudio.github.io/reticulate/reference/use_python.html) function. If you don't know how to locate your python path, you can locate it by doing the following:<br />
 
 First open python in your activated conda environment by typing the following command in your terminal:
-</p>
 
 ```
 conda activate SPIDER
