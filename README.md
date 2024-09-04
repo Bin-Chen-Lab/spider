@@ -3,8 +3,6 @@
 SPIDER (surface protein prediction using deep ensembles from single-cell RNA-seq) is a context-agnostic zero-shot deep ensemble model, which can predict the abundance for thousands of cell surface proteins based on single-cell transcriptomic data. 
 </p>
 
-![](https://github.com/Bin-Chen-Lab/spider/blob/main/figure_intro.jpg)
-
 # Step 1: Installation of dependency packages
 Before installing SPIDER, you will need to install all the dependent R and python packages ([dependent python and python packages requirements](https://github.com/Bin-Chen-Lab/spider/blob/main/dependencies/python%20package%20dependencies), and [dependent R and R packages requirements](https://github.com/Bin-Chen-Lab/spider/blob/main/dependencies/R%20package%20dependencies.R)). We provide a convenient way for you to install these dependencies via our environment file, which will create a conda environment named "SPIDER" with the required dependencies (If your computer does not have conda, you should go the the [conda website](https://conda.io/projects/conda/en/latest/index.html) to install conda first): <br />
 
