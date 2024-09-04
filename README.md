@@ -89,7 +89,7 @@ library(SPIDER)
 data("sample_query")
 ```
 <p align="justify">
-In R, use SPIDER as following to predict on the sample query transcriptomes. This demo will predict around 2,000 proteins in 1,239 cell. The run time on a typical M2 Mac laptop is around 1 hour.
+In R, use SPIDER as following to predict on the sample query transcriptomes. This demo will predict the abundance of ~2,000 surface proteins in 1,239 single cells. The run time on a typical M2 Mac laptop is around 1 hour.
 </p>
   
 ```
