@@ -1,6 +1,6 @@
 # SPIDER
 <p align="justify">
-SPIDER (surface protein prediction using deep ensembles from single-cell RNA-seq) is a context-agnostic zero-shot deep ensemble model, which can predict the abundance for thousands of cell surface proteins based on single-cell transcriptomic data. 
+SPIDER (surface protein prediction using deep ensembles from single-cell RNA-seq) is a context-agnostic zero-shot deep ensemble model, which can predict the abundance for thousands of cell surface proteins in single cells based on transcriptomic data. 
 </p>
 
 ![](https://github.com/Bin-Chen-Lab/spider/blob/main/figure_intro.png)
