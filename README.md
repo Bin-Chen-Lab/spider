@@ -151,6 +151,8 @@ We provide a series of tutorials for SPIDER's downstream applications, which you
 
 [Using SPIDER for disease biomarker discovery](https://html-preview.github.io/?url=https://github.com/Bin-Chen-Lab/spider/blob/main/tutorials/SPIDER_application_disease_biomarker_identification.html)
 
+[Using SPIDER for cell type marker identification (cell annotation)](https://html-preview.github.io/?url=https://github.com/Bin-Chen-Lab/spider/blob/main/tutorials/SPIDER_applications_cell_annotation.html)
+
 # Frequently asked questions
 #### Q1: 
 I have already executed the codes from step 1 & 2 without encountering error, but when I run [step 3](#step-3-spider-usage-with-sample-data), why do I still encounter the following errors such as: 
