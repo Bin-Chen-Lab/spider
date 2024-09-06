@@ -1,8 +1,9 @@
 # SPIDER
-SPIDER (surface protein prediction using deep ensembles from single-cell RNA-seq) is a context-agnostic zero-shot deep ensemble model, which can predict the abundance for thousands of cell surface proteins in single cells based on transcriptomic data. Read our SPIDER paper here: [Imputing abundance of over 2,500 surface proteins from single-cell transcriptomes with context- agnostic zero-shot deep ensembles](https://urldefense.com/v3/__https://kwnsfk27.r.eu-west-1.awstrack.me/L0/https:*2F*2Fauthors.elsevier.com*2Fc*2F1jjdh8YyDfqlT1/1/01020191c7db0b6c-075730ca-63b0-4ecb-9a9a-427e36ecc626-000000/XVmkhHp_sb3ZpUD-EP4jshHrhuk=390__;JSUlJQ!!HXCxUKc!0c3rnkcbNtTIN0F0m04-LVcAVI1T6Cp5aAC9gJVnib5qurtQikndjN4iZhqOGX_KEFY986xbK-8bEhIxm8K4$)
-  
+SPIDER (surface protein prediction using deep ensembles from single-cell RNA-seq) is a context-agnostic zero-shot deep ensemble model, which can predict the abundance for thousands of cell surface proteins in single cells based on transcriptomic data.
 
 ![](https://github.com/Bin-Chen-Lab/spider/blob/main/figure_intro.png)
+
+Read our SPIDER paper here: [Ruoqiao Chen et al., Imputing abundance of over 2,500 surface proteins from single-cell transcriptomes with context- agnostic zero-shot deep ensembles, Cell Systems, 2024](https://urldefense.com/v3/__https://kwnsfk27.r.eu-west-1.awstrack.me/L0/https:*2F*2Fauthors.elsevier.com*2Fc*2F1jjdh8YyDfqlT1/1/01020191c7db0b6c-075730ca-63b0-4ecb-9a9a-427e36ecc626-000000/XVmkhHp_sb3ZpUD-EP4jshHrhuk=390__;JSUlJQ!!HXCxUKc!0c3rnkcbNtTIN0F0m04-LVcAVI1T6Cp5aAC9gJVnib5qurtQikndjN4iZhqOGX_KEFY986xbK-8bEhIxm8K4$)
 
 # Step 1: Installation of dependency packages
 Before installing SPIDER, you will need to install all the dependent R and python packages ([dependent python and python packages requirements](https://github.com/Bin-Chen-Lab/spider/blob/main/dependencies/python%20package%20dependencies), and [dependent R and R packages requirements](https://github.com/Bin-Chen-Lab/spider/blob/main/dependencies/R%20package%20dependencies.R)). We provide a convenient way for you to install these dependencies via our environment file, which will create a conda environment named "SPIDER" with the required dependencies (If your computer does not have conda, you should go the the [conda website](https://conda.io/projects/conda/en/latest/index.html) to install conda first): <br />
@@ -211,9 +212,7 @@ To find code to reproduce the results we generated in the manuscript, please vis
 </p>
 
 # Citation
-<p align="justify">
-please cite this repo https://github.com/Bin-Chen-Lab/spider with authors (Ruoqiao Chen (chenruo4@msu.edu), Jiayu Zhou, Bin Chen (chenbi12@msu.edu), Michigan State University).
-</p>
+If SPIDER is helpful in your research, please consider citing our [SPIDER paper](https://urldefense.com/v3/__https://kwnsfk27.r.eu-west-1.awstrack.me/L0/https:*2F*2Fauthors.elsevier.com*2Fc*2F1jjdh8YyDfqlT1/1/01020191c7db0b6c-075730ca-63b0-4ecb-9a9a-427e36ecc626-000000/XVmkhHp_sb3ZpUD-EP4jshHrhuk=390__;JSUlJQ!!HXCxUKc!0c3rnkcbNtTIN0F0m04-LVcAVI1T6Cp5aAC9gJVnib5qurtQikndjN4iZhqOGX_KEFY986xbK-8bEhIxm8K4$).
 
 
 
