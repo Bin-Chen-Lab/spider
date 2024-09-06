@@ -147,7 +147,7 @@ The output files from SPIDER will be stored in your specified directory. <br />
 "all_unseen_proteins_predicted.csv": the predicted surface abundance for all the unseen proteins. <br />
 "confidence_score_all_unseen_proteins.csv": The estimated prediction confidence for all the unseen proteins.
 </p>
-We provide a series of tutorials for SPIDER's downstream applications, which you can follow to analyze the SPIDER-predicted surface protein abundance data for your research: <br />
+We provide a series of tutorials for SPIDER's downstream applications, which you can follow to analyze the SPIDER-predicted surface protein abundance data for your research: <br /> <br />
 
 [Using SPIDER for disease biomarker discovery](https://html-preview.github.io/?url=https://github.com/Bin-Chen-Lab/spider/blob/main/tutorials/SPIDER_application_disease_biomarker_identification.html)
 
