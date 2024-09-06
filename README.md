@@ -150,7 +150,7 @@ The output files from SPIDER will be stored in your specified directory. <br />
 
 # Frequently asked questions
 #### Q1: 
-I have already executed the codes from step 1 & 2 without enconutering error, but when I run [step 3](#step-3-spider-usage-with-sample-data), why do I still enconter the following errors such as: 
+I have already executed the codes from step 1 & 2 without encountering error, but when I run [step 3](#step-3-spider-usage-with-sample-data), why do I still encounter the following errors such as: 
 ```
 the No non-system installation of Python could be found.
 Would you like to download and install Miniconda? [Y/n]
