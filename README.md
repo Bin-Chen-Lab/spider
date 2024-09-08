@@ -149,11 +149,11 @@ The output files from SPIDER will be stored in your specified directory. <br />
 </p>
 We provide a series of tutorials for SPIDER's downstream applications, which you can follow to analyze the SPIDER-predicted surface protein abundance data for your research: <br /> <br />
 
-[Using SPIDER for disease biomarker/target discovery](https://github.com/Bin-Chen-Lab/spider/blob/main/tutorials/SPIDER_application_disease_biomarker_identification.html)
+[Using SPIDER for disease biomarker/target discovery](https://html-preview.github.io/?url=https://github.com/Bin-Chen-Lab/spider/blob/main/tutorials/SPIDER_application_disease_biomarker_identification.html)
 
-[Using SPIDER for cell type marker identification (cell annotation)](https://github.com/Bin-Chen-Lab/spider/blob/main/tutorials/SPIDER_applications_cell_annotation.html)
+[Using SPIDER for cell type marker identification (cell annotation)](https://html-preview.github.io/?url=https://github.com/Bin-Chen-Lab/spider/blob/main/tutorials/SPIDER_applications_cell_annotation.html)
 
-[Using SPIDER for cell-cell interaction analysis](https://github.com/Bin-Chen-Lab/spider/blob/main/tutorials/SPIDER_applications_cell_cell_interaction.html)
+[Using SPIDER for cell-cell interaction analysis](https://html-preview.github.io/?url=https://github.com/Bin-Chen-Lab/spider/blob/main/tutorials/SPIDER_applications_cell_cell_interaction.html)
 
 # Frequently asked questions
 #### Q1: 
