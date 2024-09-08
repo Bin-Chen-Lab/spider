@@ -153,7 +153,7 @@ We provide a series of tutorials for SPIDER's downstream applications, which you
 
 [Using SPIDER for cell type marker identification (cell annotation)](https://github.com/Bin-Chen-Lab/spider/blob/main/tutorials/SPIDER_applications_cell_annotation.html)
 
-Using SPIDER for cell-cell interaction analysis (Tutorial to be updated soon)
+[Using SPIDER for cell-cell interaction analysis](https://github.com/Bin-Chen-Lab/spider/blob/main/tutorials/SPIDER_applications_cell_cell_interaction.html)
 
 # Frequently asked questions
 #### Q1: 
