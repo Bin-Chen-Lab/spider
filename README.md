@@ -212,7 +212,8 @@ To find code to reproduce the results we generated in the manuscript, please vis
 </p>
 
 # Citation
-If SPIDER is helpful in your research, please consider citing our paper: [Ruoqiao Chen et al., Imputing abundance of over 2,500 surface proteins from single-cell transcriptomes with context- agnostic zero-shot deep ensembles, Cell Systems, 2024](https://www.cell.com/cell-systems/fulltext/S2405-4712(24)00236-9)
+If SPIDER is helpful in your research, please consider citing our paper: <br />
+[Ruoqiao Chen et al., Imputing abundance of over 2,500 surface proteins from single-cell transcriptomes with context- agnostic zero-shot deep ensembles, Cell Systems, 2024](https://www.cell.com/cell-systems/fulltext/S2405-4712(24)00236-9)
 
 
 
