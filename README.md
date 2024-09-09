@@ -113,7 +113,7 @@ Note that you may need to modify "use_python_path = NULL" here according to your
 
 For other commonly used parameters here:<br />
 <p align="justify">
-seurat_data: The Seurat object of your transcriptomic data after prepocessing. The Seurat object should include Seurat log normalization, clustering and umap reductions. Your meta.data should include a column named "study" which specifies the batch IDs for all cells. You can look at the example transcriptomic data we provided using data("sample_query") in R.
+"seurat_data": The Seurat object of your transcriptomic data after prepocessing. The Seurat object should include Seurat log normalization, clustering and umap reductions. Your meta.data should include a column named "study" which specifies the batch IDs for all cells. You can look at the example transcriptomic data we provided using data("sample_query") in R.
 </p>
 
 <p align="justify">
