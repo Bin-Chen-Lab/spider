@@ -113,7 +113,7 @@ Note that you may need to modify "use_python_path = NULL" here according to your
 
 For other commonly used parameters here:<br />
 
-"seurat_data": The Seurat object of your transcriptomic data after prepocessing. The Seurat object should include Seurat log normalization, clustering and umap reductions. Your meta.data should include a column named "study" which specifies the batch IDs for all cells (this column will be passed to [scArches-SCANVI](https://docs.scarches.org/en/latest/scanvi_surgery_pipeline.html)'s [condition_key](https://docs.scarches.org/en/latest/scanvi_surgery_pipeline.html) parameter). You can look at the example transcriptomic data we provided using data("sample_query") in R.
+"seurat_data": The Seurat object of your transcriptomic data after prepocessing. The Seurat object should include Seurat log normalization, clustering and umap reductions. Your meta.data should include a column named "study" which specifies the batch IDs for all cells (this column will be passed to [scArches-SCANVI](https://docs.scarches.org/en/latest/scanvi_surgery_pipeline.html)'s [condition_key](https://docs.scarches.org/en/latest/scanvi_surgery_pipeline.html) parameter). You can look at the example transcriptomic data we provided (using data("sample_query") in R).
 
 <p align="justify">
 "tissue": The name of the source tissue of your transcriptome data (If your data contain multiple tissues, subset your data by tissue and run SPIDER separately on each subset). Use help(SPIDER_predict) to read more about this parameter. If your data's corresponding tissue is NOT among the 5 default tissues ('bone marrow', 'brain', 'blood', 'pleura', 'peritoneum'), use a new name that represents your data's corresponding tissue. <br /> 
