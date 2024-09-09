@@ -160,7 +160,7 @@ We provide a series of tutorials for SPIDER's downstream applications, which you
 #### Q1: 
 I have already executed the codes from step 1 & 2 without encountering error, but when I run [step 3](#step-3-spider-usage-with-sample-data), why do I still encounter the following errors such as: 
 ```
-the No non-system installation of Python could be found.
+No non-system installation of Python could be found.
 Would you like to download and install Miniconda? [Y/n]
 ```
 and
