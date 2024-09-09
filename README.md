@@ -112,6 +112,7 @@ SPIDER_predict ( seurat_data = RNA,
 Note that you may need to modify "use_python_path = NULL" here according to your system setting. SPIDER will pass this parameter to [reticulate](https://rstudio.github.io/reticulate/)'s [use_python](https://rstudio.github.io/reticulate/reference/use_python.html) function. You can use "use_python_path = NULL" if your default python configuration for reticulate is the same as the python installed in your SPIDER conda environment. However, if your default python configuration for reticulate is different from the python installed in your SPIDER conda environment, you'll need to modify the "use_python_path" parameter to indicate the path to the python installed in your SPIDER conda environment. If you don't know how to locate your python path, see [Q1](#q1) in [frequently asked questions](#frequently-asked-questions) section below.<br /> 
 
 For other commonly used parameters here:<br />
+
 "seurat_data": The Seurat object of your transcriptomic data after prepocessing. The Seurat object should include Seurat log normalization, clustering and umap reductions. Your meta.data should include a column named "study" which specifies the batch IDs for all cells (this column will be passed to [scArches-SCANVI](https://docs.scarches.org/en/latest/scanvi_surgery_pipeline.html)'s [condition_key](https://docs.scarches.org/en/latest/scanvi_surgery_pipeline.html) parameter). You can look at the example transcriptomic data we provided using data("sample_query") in R.
 
 <p align="justify">
