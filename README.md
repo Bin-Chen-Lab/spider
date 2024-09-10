@@ -208,9 +208,8 @@ Yes, you can run SPIDER on other species' scRNA-seq data besides human data. But
 </p>
 
 # Reproducibility
-<p align="justify">
 To find code to reproduce the results we generated in the manuscript, please visit [this separate github repository](https://github.com/Bin-Chen-Lab/spider_analysis/), which provides all code necessary to reproduce our results.
-</p>
+
 
 # Citation
 If SPIDER is helpful in your research, please consider citing our paper: <br />
