@@ -1,11 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 title: "Imputing abundance of over 2,500 surface proteins from single-cell transcriptomes with context- agnostic zero-shot deep ensembles"
-contact:
-  - name: "Ruoqiao Chen"
-    email: "chenruo4@msu.edu"
-  - name: "Bin Chen"
-    email: "chenbi12@msu.edu"
 type: "article"
 journal: "Cell Systems"
 year: "2024"
@@ -21,6 +16,7 @@ authors:
 - family-names: Chen
   given-names: Bin
   orcid: https://orcid.org/0000-0001-8858-874X
+  email: "chenbi12@msu.edu"
 version: 1.0.0
 
 
