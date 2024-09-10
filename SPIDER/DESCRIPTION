@@ -2,8 +2,8 @@ Package: SPIDER
 Type: Package
 Title: Surface protein prediction using deep ensembles from single-cell RNA sequencing (SPIDER)
 Version: 0.1.0
-Author: Ruoqiao Chen (chenruo4@msu.edu)
-Maintainer: Ruoqiao Chen <chenruo4@msu.edu>
+Author: Ruoqiao Chen (chenruo4@msu.edu) (chenrq2020@gmail.com)
+Maintainer: Ruoqiao Chen <chenruo4@msu.edu> <chenrq2020@gmail.com>
 Description: SPIDER (surface protein prediction using deep ensembles from single-cell RNA-seq) is a context-agnostic zero-shot deep ensemble model, which enables the large-scale prediction of cell surface protein abundance.
 License: GPL-3
 Depends: reticulate, Seurat, SingleR
